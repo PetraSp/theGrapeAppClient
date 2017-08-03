@@ -1,4 +1,4 @@
-// Import 
+// Import
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,13 +15,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { ApiService } from './services/api.service';
+import { CounterService } from './services/counter.service';
+import { ScanComponent } from './components/scan/scan.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScanComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { ApiService } from './services/api.service';
     RouterModule.forRoot(routes),
     HttpModule,
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService,
+    CounterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
