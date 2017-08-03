@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'app-scan',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scan.component.css']
 })
 export class ScanComponent implements OnInit {
-
-  constructor() { }
+  constructor(private counter: CounterService) {}
 
   ngOnInit() {
   }
+  incrementCounter() {
+    this.counter.increment();
+  }
 
+  decrementCounter() {
+    this.counter.decrement();
+  }
 }
