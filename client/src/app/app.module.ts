@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { ApiService } from './services/api.service';
+import { CounterService } from './services/counter.service';
 import { ScanComponent } from './components/scan/scan.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
@@ -33,7 +34,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     RouterModule.forRoot(routes),
     HttpModule,
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService,
+    CounterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
