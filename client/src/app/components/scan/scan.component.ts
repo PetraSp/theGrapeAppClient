@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CounterService } from '../../services/counter.service';
+import { TastingProgressService } from '../../services/tasting-progress.service';
 
 @Component({
   selector: 'app-scan',
@@ -7,15 +7,26 @@ import { CounterService } from '../../services/counter.service';
   styleUrls: ['./scan.component.css']
 })
 export class ScanComponent implements OnInit {
-  constructor(private counter: CounterService) {}
+  constructor(private currentRouteId: TastingProgressService) {}
 
   ngOnInit() {
   }
-  incrementCounter() {
-    this.counter.increment();
+
+  goToNextRoute() {
+    this.currentRouteId.goToNextRoute();
   }
 
-  decrementCounter() {
-    this.counter.decrement();
+  goToPreviousRoute() {
+    this.currentRouteId.goToPreviousRoute();
   }
+
+  goToBeginning() {
+  this.currentRouteId.goToBeginning();
+  }
+
+  goToEnd() {
+
+  }
+
+
 }

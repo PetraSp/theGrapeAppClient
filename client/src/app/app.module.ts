@@ -15,9 +15,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { ApiService } from './services/api.service';
-import { CounterService } from './services/counter.service';
+import { TastingProgressService } from './services/tasting-progress.service';
 import { ScanComponent } from './components/scan/scan.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TastingComponent } from './components/tasting/tasting.component';
+import { AppearanceComponent } from './components/tasting/appearance/appearance.component';
+import { NoseComponent } from './components/tasting/nose/nose.component';
+import { PalateComponent } from './components/tasting/palate/palate.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     HeaderComponent,
     NavbarComponent,
     ScanComponent,
-    ProfileComponent
+    ProfileComponent,
+    TastingComponent,
+    AppearanceComponent,
+    NoseComponent,
+    PalateComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,7 @@ import { ProfileComponent } from './components/profile/profile.component';
   ],
   providers: [
     ApiService,
-    CounterService
+    TastingProgressService
   ],
   bootstrap: [AppComponent]
 })
