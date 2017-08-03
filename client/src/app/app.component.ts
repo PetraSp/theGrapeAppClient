@@ -10,7 +10,7 @@ import { ApiService } from './services/api.service';
 
 export class AppComponent {
   title = 'theGrapeApp';
-  userList:Array<{}> = [];
+  userList;
 
   constructor(
     private api: ApiService,
