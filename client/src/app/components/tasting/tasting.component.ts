@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TastingProgressService } from 'tasting-progress.service'
 
 @Component({
   selector: 'app-tasting',

@@ -9,11 +9,13 @@ export class TastingProgressService {
   ];
 
   currentRouteId= 0;
+  currentRouteName;
 
   constructor() { }
   goToNextRoute() {
       this.currentRouteId++;
-      console.log(`Count is now ${this.currentRouteId}`);
+    console.log(`Count is now ${this.currentRouteId}`);
+    return  this.routes[this.currentRouteId];
   }
 
   goToPreviousRoute() {
@@ -21,26 +23,18 @@ export class TastingProgressService {
       this.currentRouteId = 0;
     } else {
       this.currentRouteId--;
-      console.log(`Count is now ${this.currentRouteId}`);
+    console.log(`Count is now ${this.currentRouteId}`);
+    return  this.routes[this.currentRouteId];
   }
 }
 
   goToBeginning() {
-    if (this.currentRouteId <= 0) {
       this.currentRouteId = 0;
-    } else {
-      this.currentRouteId--;
-      console.log(`Count is now ${this.currentRouteId}`);
-  }
+      return  this.routes[this.currentRouteId];
 }
 
   goToEnd() {
-    if (this.currentRouteId <= 0) {
-      this.currentRouteId = 0;
-    } else {
-      this.currentRouteId--;
-      console.log(`Count is now ${this.currentRouteId}`);
-  }
-
+      this.currentRouteId = this.routes.length;
+      return  this.routes[this.currentRouteId]; 
 }
 }
