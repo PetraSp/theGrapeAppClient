@@ -1,4 +1,10 @@
 
+<h1>{{title}}</h1>
+  <p>Users:</p>
+  <ul *ngFor='let user of userList'>
+    <li>{{user}}</li>
+  </ul>
+
 <div class="container">
   <div class="video">
     <video controls="controls" width="600" height="400" name="Wine"
