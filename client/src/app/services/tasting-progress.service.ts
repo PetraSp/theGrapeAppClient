@@ -8,7 +8,7 @@ export class TastingProgressService {
     'palate'
   ];
 
-  currentRouteId= 0;
+  currentRouteId= -1;
   currentRouteName;
 
   constructor() { }
@@ -25,7 +25,7 @@ export class TastingProgressService {
   goToPreviousRoute() {
     if (this.currentRouteId <= 0) {
       this.currentRouteId = 0;
-    } 
+    }
     else {
       this.currentRouteId--;
       console.log(`Count is now ${this.currentRouteId}`);
@@ -40,6 +40,6 @@ export class TastingProgressService {
 
   goToEndRoute() {
       this.currentRouteId = this.routes.length;
-      return  this.routes[this.currentRouteId]; 
+      return  this.routes[this.currentRouteId];
   }
 }
