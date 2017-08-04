@@ -14,9 +14,16 @@ export class TastingProgressService {
 
   constructor(private router: Router) { }
   goToNextRoute() {
-    this.currentRouteId++;
-    this.test = this.routes[this.currentRouteId];
-    this.router.navigate([`tasting/${this.test}`])
+    if (this.currentRouteId > this.routes.length) {
+      this.test = this.routes[this.routes.length];
+      this.router.navigate([`tasting/${this.test}`])
+
+    }
+    else {
+      this.currentRouteId++;
+      this.test = this.routes[this.currentRouteId];
+      this.router.navigate([`tasting/${this.test}`])
+    }
   }
 
   goToPreviousRoute() {
