@@ -10,15 +10,17 @@ import { AppearanceComponent } from './components/tasting/appearance/appearance.
 import { NoseComponent } from './components/tasting/nose/nose.component';
 import { PalateComponent } from './components/tasting/palate/palate.component';
 import { InstructionsComponent} from './components/tasting/appearance/instructions/instructions.component';
+import { NoseInstructionsComponent } from './components/tasting/nose/nose-instructions/nose-instructions.component';
+import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'scan', component: ScanComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'tasting', component: TastingComponent },
-  { path: 'tasting/appearance/instructions', component: InstructionsComponent },
-  { path: 'tasting/appearance/colorSchema', component: AppearanceComponent },
-  { path: 'tasting/nose/instructions', component: NoseComponent },
+  { path: 'tasting/appearance/instructions', component: TastingComponent },
+  { path: 'tasting/appearance/colorSchema', component: ColorSchemaComponent },
+  { path: 'tasting/nose/instructions', component: NoseInstructionsComponent },
   { path: 'tasting/nose/floral', component: NoseComponent },
   { path: 'tasting/nose/redFruit', component: NoseComponent },
   { path: 'tasting/nose/blackFruit', component: NoseComponent },

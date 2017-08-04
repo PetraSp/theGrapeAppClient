@@ -23,6 +23,8 @@ import { ApiService } from './services/api.service';
 import { TastingProgressService } from './services/tasting-progress.service';
 import { RouterButtonComponent } from './components/tasting/router-button/router-button.component';
 import { InstructionsComponent } from './components/tasting/appearance/instructions/instructions.component';
+import { NoseInstructionsComponent } from './components/tasting/nose/nose-instructions/nose-instructions.component';
+import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { InstructionsComponent } from './components/tasting/appearance/instructi
     NoseComponent,
     PalateComponent,
     RouterButtonComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    NoseInstructionsComponent,
+    ColorSchemaComponent,
   ],
   imports: [
     BrowserModule,

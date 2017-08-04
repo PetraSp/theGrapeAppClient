@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class TastingProgressService {
   routes: Array<string> = [
     'appearance/instructions',
+    'appearance/colorSchema',
     'nose/instructions',
     'palate/instructions'
   ];
