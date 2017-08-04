@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Injectable()
 export class TastingProgressService {
@@ -9,28 +10,27 @@ export class TastingProgressService {
   ];
 
   currentRouteId= -1;
-  currentRouteName;
+  test;
 
-  constructor() { }
+  constructor(private router: Router) { }
   goToNextRoute() {
     console.log(this.currentRouteId);
     this.currentRouteId++;
     console.log(`Count is now ${this.currentRouteId}`);
-    let test = this.routes[this.currentRouteId];
+    this.test = this.routes[this.currentRouteId];
     console.log('routes', this.routes);
-    console.log("this is a test", test);
-    return test;
+    console.log('this is a test', this.test);
+    this.router.navigate([`tasting/${this.test}`])
   }
 
   goToPreviousRoute() {
     if (this.currentRouteId <= 0) {
       this.currentRouteId = 0;
-    } 
-    else {
+    } else {
       this.currentRouteId--;
-      console.log(`Count is now ${this.currentRouteId}`);
-      return  this.routes[this.currentRouteId];
     }
+    this.test = this.routes[this.currentRouteId];
+    this.router.navigate([`tasting/${this.test}`])
   }
 
   goToBeginningRoute() {
@@ -40,6 +40,6 @@ export class TastingProgressService {
 
   goToEndRoute() {
       this.currentRouteId = this.routes.length;
-      return  this.routes[this.currentRouteId]; 
+      return  this.routes[this.currentRouteId];
   }
 }

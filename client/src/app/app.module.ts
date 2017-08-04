@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 import { routes } from './app-routes';
-
 // The one component to rule them all. Don't delete or everything breaks.
 import { AppComponent } from './app.component';
 
@@ -42,7 +41,7 @@ import { RouterButtonComponent } from './components/tasting/router-button/router
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpModule,
+    HttpModule
   ],
   providers: [
     ApiService,
@@ -51,5 +50,3 @@ import { RouterButtonComponent } from './components/tasting/router-button/router
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
