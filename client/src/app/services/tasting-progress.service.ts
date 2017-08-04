@@ -13,10 +13,11 @@ export class TastingProgressService {
   test;
 
   constructor(private router: Router) { }
+
   goToNextRoute() {
-    if (this.currentRouteId > this.routes.length-1) {
+    if (this.currentRouteId >= this.routes.length -1) {
       this.test = this.routes[this.routes.length];
-      this.router.navigate([`tasting/${this.test}`])
+      // this.router.navigate([`tasting/${this.test}`])
     }
     else {
       this.currentRouteId++;
