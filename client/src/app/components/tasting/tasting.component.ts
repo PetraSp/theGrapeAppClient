@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class TastingComponent implements OnInit {
 
 
-  ngOnInit() {
-    console.log('dbgjkñabsdjñgjasñhd<gh');
-}
+  ngOnInit() {}
 
 }
