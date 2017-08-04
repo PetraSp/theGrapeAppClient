@@ -8,7 +8,7 @@ export class TastingProgressService {
     'palate'
   ];
 
-  currentRouteId= 0;
+  currentRouteId= -1;
   currentRouteName;
 
   constructor() { }
