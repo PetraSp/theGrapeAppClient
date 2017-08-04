@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class InstructionsComponent implements OnInit {
 
   location = '';
-  
-  constructor(private _router :Router){
+
+  constructor(private _router: Router) {
     this.location = _router.url;
   }
 
