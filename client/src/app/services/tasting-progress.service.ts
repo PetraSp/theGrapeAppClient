@@ -13,9 +13,10 @@ export class TastingProgressService {
   test;
 
   constructor(private router: Router) { }
+  
   goToNextRoute() {
-    if (this.currentRouteId >= this.routes.length-1) {
-      console.log("You've gone too far!");
+    if (this.currentRouteId >= this.routes.length - 1) {
+      this.test = this.routes[this.routes.length];
     }
     else {
       this.currentRouteId++;
