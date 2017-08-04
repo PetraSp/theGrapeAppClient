@@ -14,14 +14,14 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-import { ApiService } from './services/api.service';
-import { TastingProgressService } from './services/tasting-progress.service';
 import { ScanComponent } from './components/scan/scan.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TastingComponent } from './components/tasting/tasting.component';
 import { AppearanceComponent } from './components/tasting/appearance/appearance.component';
 import { NoseComponent } from './components/tasting/nose/nose.component';
 import { PalateComponent } from './components/tasting/palate/palate.component';
+import { ApiService } from './services/api.service';
+import { TastingProgressService } from './services/tasting-progress.service';
 
 @NgModule({
   declarations: [
@@ -49,3 +49,5 @@ import { PalateComponent } from './components/tasting/palate/palate.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
