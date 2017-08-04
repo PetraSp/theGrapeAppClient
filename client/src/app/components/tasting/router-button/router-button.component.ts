@@ -15,12 +15,10 @@ export class RouterButtonComponent implements OnInit {
   endRoute;
   constructor(private tastingProgress: TastingProgressService, private router: Router) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
+  
   getNextRoute() {
     this.nextRoute = this.tastingProgress.goToNextRoute();
-    return this.nextRoute;
   }
   getPreviousRoute() {
     this.previousRoute = this.tastingProgress.goToPreviousRoute();

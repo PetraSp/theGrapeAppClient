@@ -7,14 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./instructions.component.css']
 })
 export class InstructionsComponent implements OnInit {
-
-  location = '';
-
-  constructor(private _router: Router) {
-    this.location = _router.url;
-  }
-
+  constructor() {}
   ngOnInit() {
   }
-
 }

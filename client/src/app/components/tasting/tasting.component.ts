@@ -10,8 +10,6 @@ export class TastingComponent implements OnInit {
 constructor() {
 }
 
-  ngOnInit() {
-    console.log('dbgjkñabsdjñgjasñhd<gh');
-}
+  ngOnInit() {}
 
 }

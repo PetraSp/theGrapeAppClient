@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class TastingProgressService {
   routes: Array<string> = [
     'appearance/instructions',
-    'nose/instructions',
+    'appearance/colorSchema',
     'palate/instructions'
   ];
 
@@ -13,7 +13,6 @@ export class TastingProgressService {
   test;
 
   constructor(private router: Router) { }
-
   goToNextRoute() {
     if (this.currentRouteId >= this.routes.length -1) {
       this.test = this.routes[this.routes.length];
