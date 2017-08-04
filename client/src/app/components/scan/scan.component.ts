@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TastingProgressService } from '../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-scan',
@@ -7,26 +7,9 @@ import { TastingProgressService } from '../../services/tasting-progress.service'
   styleUrls: ['./scan.component.css']
 })
 export class ScanComponent implements OnInit {
-  constructor(private currentRouteId: TastingProgressService) {}
+  constructor() {}
 
   ngOnInit() {
   }
-
-  goToNextRoute() {
-    this.currentRouteId.goToNextRoute();
-  }
-
-  goToPreviousRoute() {
-    this.currentRouteId.goToPreviousRoute();
-  }
-
-  goToBeginning() {
-  this.currentRouteId.goToBeginning();
-  }
-
-  goToEnd() {
-
-  }
-
 
 }
