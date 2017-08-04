@@ -4,19 +4,19 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Injectable()
 export class TastingProgressService {
   routes: Array<string> = [
-    'appearance',
-    'nose',
-    'palate'
+    'appearance/instructions',
+    'nose/instructions',
+    'palate/instructions'
   ];
 
   currentRouteId= -1;
   test;
 
   constructor(private router: Router) { }
-  
   goToNextRoute() {
-    if (this.currentRouteId >= this.routes.length - 1) {
+    if (this.currentRouteId >= this.routes.length -1) {
       this.test = this.routes[this.routes.length];
+      // this.router.navigate([`tasting/${this.test}`])
     }
     else {
       this.currentRouteId++;
