@@ -22,6 +22,7 @@ import { NoseComponent } from './components/tasting/nose/nose.component';
 import { PalateComponent } from './components/tasting/palate/palate.component';
 import { ApiService } from './services/api.service';
 import { TastingProgressService } from './services/tasting-progress.service';
+import { RouterButtonComponent } from './components/tasting/router-button/router-button.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TastingProgressService } from './services/tasting-progress.service';
     TastingComponent,
     AppearanceComponent,
     NoseComponent,
-    PalateComponent
+    PalateComponent,
+    RouterButtonComponent
   ],
   imports: [
     BrowserModule,
