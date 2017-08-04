@@ -16,7 +16,7 @@ export class TastingComponent implements OnInit {
 
   ngOnInit() {
     console.log('dbgjkñabsdjñgjasñhd<gh');
-  }
+}
 
   getNextRoute() {
     console.log('before!', this.nextRoute);
