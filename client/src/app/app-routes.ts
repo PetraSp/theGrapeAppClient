@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'scan', component: ScanComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'tasting', component: TastingComponent },
-  { path: 'tasting/appearence', component: AppearanceComponent },
+  { path: 'tasting/appearance', component: AppearanceComponent },
   { path: 'tasting/nose', component: NoseComponent },
   { path: 'tasting/palate', component: PalateComponent },
 
