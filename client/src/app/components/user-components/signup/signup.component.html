@@ -1,17 +1,16 @@
 
-<form>
-  <div *ngIf="error">
-    {{ error }}
-  </div>
+<h3>Sign Up!</h3>
+
+ <form #signUpForm='ngForm' (ngSubmit)='onSubmit(signUpForm.value)'>
   <p>
     <label for="username">Username</label>
-    <input type="text" [(ngModel)]="user.username" name="username">
+    <input type="text" name="username" placeholder="username" ngModel>
   </p>
 
   <p>
     <label for="password">Password</label>
-    <input type="text" [(ngModel)]="user.password" name="password">
+    <input type="password" name="password" placeholder="password" ngModel>
   </p>
 
-  <button (click)="login()">Login</button>
-</form>
+  <button type='submit' >Sign up</button>
+</form> 

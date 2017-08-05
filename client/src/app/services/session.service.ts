@@ -7,78 +7,36 @@ import { Router, CanActivate } from '@angular/router';
 
 
 @Injectable()
-export class ApiService {
+export class SessionService {
 
   BASE_URL: string = 'http://localhost:3000';
-  
-  // Authentication variables.
-  public user = {};
-  public token = '';
-  public isAuthenticated = false;
+  userObject;
 
-  constructor(
-    private http: Http,
-    private router: Router
-  ) { }
+  constructor(private http: Http,) { }
 
-  // Authentication error function
-  handleError(e) {
-    return Observable.throw(e.json().message);
+  getUsers() {
+    return this.http.get(`${this.BASE_URL}/api/user-entries`)
+                    .map((res) => res.json());
+  }
+  getOneUser(id) {
+    return this.http.get(`${this.BASE_URL}/api/user-entries/${id}`)
+                    .map((res) => res.json());
   }
 
-  canActivate(): Observable<boolean> | boolean {
-    let token = localStorage.getItem('token');
-
-    if (token) {
-      let headers = new Headers({ 'Authorization': `JWT ${token}` });
-      let options = new RequestOptions({ headers: headers });
-
-      return this.http.get(`${this.BASE_URL}/ping`, options)
-        .map((data) => {
-          if (data) {
-            this.isAuthenticated = true;
-            this.token = token;
-            return true;
-          }
-          return false;
-        })
-        .catch(this.handleError);
+  addUser(user) {
+    console.log('addUser Called!', user.username);
+    this.userObject = {
+      username: user.username,
+      password: user.password,
+      email: 'String',
+      city: 'String',
+      avatar: 'String'
     }
-    else {
-      this.logout();
-      this.router.navigate(['/login']);
-      return false;
-    }
+    console.log('this.userObject', this.userObject)
+    // let headers = new Headers({ 'Authorization': 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MmU3ZGJlNzg0MGY1Y2E4ZjhjZmFmZiIsInVzZXIiOiJ0aG9yIiwiaWF0IjoxNTAxMzIxNzkxfQ.T4N3dVLQ7p7E7STy7Pm_BsMtFE494JaqhMf-BfWiz6k' });
+    // let options = new RequestOptions({ headers: headers });
+    return this.http.post(`${this.BASE_URL}/api/user-entries`, this.userObject)
+      .map((res) => res.json())
   }
 
-  login(user) {
-    return this.http.post(`${this.BASE_URL}/login`, user)
-      .map(res => {
-        let json = res.json();
-        let token = json.token;
-        let user = json.user;
-
-        if (token) {
-          this.token = token;
-          this.user = {
-            _id: user.id,
-            username: user.username
-          }
-          this.isAuthenticated = true;
-          localStorage.setItem('token', this.token);
-        }
-        
-        return this.isAuthenticated;
-
-      }).catch(this.handleError);
-  }
-
-  logout() {
-    this.token = '';
-    this.user = {}
-    this.isAuthenticated = false;
-    localStorage.removeItem('token');
-
-    this.router.navigate(['/login']);
-  }
 }

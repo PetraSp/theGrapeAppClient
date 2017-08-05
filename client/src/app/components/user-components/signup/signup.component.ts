@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SessionService } from '../../services/session.service';
+import { SessionService } from '../../../services/session.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,9 +9,27 @@ import { SessionService } from '../../services/session.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  user: any = {};
+
+  constructor(
+    private session: SessionService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(user) {
+    console.log('Form submitted.', user);
+    this.session.addUser(user)
+        .subscribe(
+          data => {
+            console.log('Registration successful');
+            this.router.navigate(['login']);
+          },
+          error => {
+            console.log(error);
+          });
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './services/api.service';
 
 
 @Component({
@@ -10,20 +9,10 @@ import { ApiService } from './services/api.service';
 
 export class AppComponent {
   title = 'theGrapeApp';
-  userList;
 
-  constructor(
-    private api: ApiService,
-  )
+  constructor() {}
 
-  {}
-  ngOnInit () {
-    this.api.getUsers()
-      .subscribe((userList) => {
-        this.userList = userList;
-      });
-
-    }
+  ngOnInit () {}
 
 
 }
