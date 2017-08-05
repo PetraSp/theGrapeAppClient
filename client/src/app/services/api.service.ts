@@ -5,8 +5,13 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ApiService {
+
   BASE_URL: string = 'http://localhost:3000';
-  constructor(private http: Http) {}
+
+  constructor(
+    private http: Http,
+  ) { }
+
   getWines() {
     return this.http.get(`${this.BASE_URL}/api/wine-entries`)
                     .map((res) => res.json());
