@@ -4,7 +4,9 @@ import { Routes } from '@angular/router';
 // Import page components
 import { HomeComponent } from './components/home/home.component';
 import { ScanComponent } from './components/scan/scan.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './components/user-components/profile/profile.component';
+import { LoginComponent } from './components/user-components/login/login.component';
+import { SignupComponent } from './components/user-components/signup/signup.component';
 import { TastingComponent } from './components/tasting/tasting.component';
 import { AppearanceComponent } from './components/tasting/appearance/appearance.component';
 import { NoseComponent } from './components/tasting/nose/nose.component';
@@ -16,6 +18,8 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'scan', component: ScanComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'tasting', component: TastingComponent },
   { path: 'tasting/appearance/instructions', component: TastingComponent },
   { path: 'tasting/appearance/colorSchema', component: ColorSchemaComponent },
