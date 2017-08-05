@@ -6,7 +6,8 @@ export class TastingProgressService {
   routes: Array<string> = [
     'appearance/instructions',
     'appearance/colorSchema',
-    'palate/instructions'
+    'nose/instructions',
+    'palate/instructions',
   ];
 
   currentRouteId= -1;
