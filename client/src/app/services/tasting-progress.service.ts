@@ -6,14 +6,13 @@ export class TastingProgressService {
   routes: Array<string> = [
     'appearance/instructions',
     'appearance/colorSchema',
-    'nose/instructions',
-    'palate/instructions'
   ];
 
   currentRouteId= -1;
   test;
 
   constructor(private router: Router) { }
+
   goToNextRoute() {
     if (this.currentRouteId >= this.routes.length -1) {
       this.test = this.routes[this.routes.length];
