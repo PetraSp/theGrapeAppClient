@@ -1,3 +1,19 @@
-<p>
-  floral works!
-</p>
+
+<h3>Floral Aromas</h3>
+
+<img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral aromas... Mmmmmmh!">
+
+<p>Select the aromas <br>you have decided:</p>
+
+ <div class="floralComponentOptions">
+   <button (click)="toggle()">Toggle Button</button>
+	<!-- <input type=radio (click)="sendUserResponse('rose')" class="options" value="Rose">
+	<input type=radio (click)="sendUserResponse('violet')" class="options" value="Violet">
+	<input type=radio (click)="sendUserResponse('potpourri')" class="options" value="Potpourri">
+	<input type=radio (click)="sendUserResponse('floral')" class="options" value="Perfumed/Floral">
+	<input type=radio (click)="sendUserResponse('')" class="options" value="I can't smell any flowers"> -->
+</div> 
+
+  <div *ngIf="isActive">
+    <h1>Hello!</h1>
+  </div>

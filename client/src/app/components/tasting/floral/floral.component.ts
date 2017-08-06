@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloralComponent implements OnInit {
 
+  floralResponse: Array<string> = [];
+
+  isActive: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggle() {
+    this.isActive = !this.isActive;
+  }
+
+  sendUserResponse(floral) {
+    this.floralResponse.push(floral);
+    console.log('this.floralResponse', this.floralResponse);
+  }
 }
