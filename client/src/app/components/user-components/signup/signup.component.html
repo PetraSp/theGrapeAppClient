@@ -1,0 +1,16 @@
+
+<h3>Sign Up!</h3>
+
+ <form #signUpForm='ngForm' (ngSubmit)='onSubmit(signUpForm.value)'>
+  <p>
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="username" ngModel>
+  </p>
+
+  <p>
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="password" ngModel>
+  </p>
+
+  <button type='submit' >Sign up</button>
+</form> 

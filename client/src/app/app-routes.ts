@@ -4,12 +4,14 @@ import { Routes } from '@angular/router';
 // Import page components
 import { HomeComponent } from './components/home/home.component';
 import { ScanComponent } from './components/scan/scan.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './components/user-components/profile/profile.component';
+import { LoginComponent } from './components/user-components/login/login.component';
+import { SignupComponent } from './components/user-components/signup/signup.component';
 import { TastingComponent } from './components/tasting/tasting.component';
 import { AppearanceComponent } from './components/tasting/appearance/appearance.component';
 import { NoseComponent } from './components/tasting/nose/nose.component';
 import { PalateComponent } from './components/tasting/palate/palate.component';
-import { InstructionsComponent} from './components/tasting/appearance/instructions/instructions.component';
+import { InstructionsComponent} from './components/tasting/instructions/instructions.component';
 import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
 import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
 

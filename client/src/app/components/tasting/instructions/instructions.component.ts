@@ -6,8 +6,16 @@ import { Router } from '@angular/router';
   templateUrl: './instructions.component.html',
   styleUrls: ['./instructions.component.css']
 })
+
 export class InstructionsComponent implements OnInit {
-  constructor() {}
+
+  location = '';
+
+  constructor(private _router: Router) {
+    this.location = _router.url;
+  }
+
   ngOnInit() {
   }
+
 }
