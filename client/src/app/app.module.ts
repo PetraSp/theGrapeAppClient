@@ -15,20 +15,22 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ScanComponent } from './components/scan/scan.component';
 import { ProfileComponent } from './components/user-components/profile/profile.component';
 import { TastingComponent } from './components/tasting/tasting.component';
-import { AppearanceComponent } from './components/tasting/appearance/appearance.component';
-import { NoseComponent } from './components/tasting/nose/nose.component';
-import { PalateComponent } from './components/tasting/palate/palate.component';
 import { ApiService } from './services/api.service';
 import { SessionService } from './services/session.service';
 import { TastingProgressService } from './services/tasting-progress.service';
 import { RouterButtonComponent } from './components/tasting/router-button/router-button.component';
 import { InstructionsComponent } from './components/tasting/instructions/instructions.component';
-import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
+import { ColorSchemaComponent } from './components/tasting/color-schema/color-schema.component';
 import { SignupComponent } from './components/user-components/signup/signup.component';
 import { LoginComponent } from './components/user-components/login/login.component';
 import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
 import { NotesComponent } from './components/notes/notes.component';
-import { QuirkyComponent } from './components/tasting/palate/quirky/quirky.component';
+import { QuirkyComponent } from './components/tasting/quirky/quirky.component';
+import { FloralComponent } from './components/tasting/floral/floral.component';
+import { RedFruitComponent } from './components/tasting/red-fruit/red-fruit.component';
+import { BlackFruitComponent } from './components/tasting/black-fruit/black-fruit.component';
+import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-fruit.component';
+import { HerbsComponent } from './components/tasting/herbs/herbs.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,6 @@ import { QuirkyComponent } from './components/tasting/palate/quirky/quirky.compo
     ProfileComponent,
     TastingIntroComponent,
     TastingComponent,
-    AppearanceComponent,
-    NoseComponent,
-    PalateComponent,
     RouterButtonComponent,
     InstructionsComponent,
     ColorSchemaComponent,
@@ -50,6 +49,11 @@ import { QuirkyComponent } from './components/tasting/palate/quirky/quirky.compo
     LoginComponent,
     NotesComponent,
     QuirkyComponent,
+    FloralComponent,
+    RedFruitComponent,
+    BlackFruitComponent,
+    DriedFruitComponent,
+    HerbsComponent,
   ],
   imports: [
     BrowserModule,
