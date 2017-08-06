@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class TastingComponent implements OnInit {
 location = '';
 
-constructor(private _router:Router) {
+constructor(private _router: Router) {
   this.location = _router.url;
 }
 
