@@ -32,6 +32,7 @@ import { BlackFruitComponent } from './components/tasting/black-fruit/black-frui
 import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-fruit.component';
 import { HerbsComponent } from './components/tasting/herbs/herbs.component';
 import { NotesComparisonComponent } from './components/notes-comparison/notes-comparison.component';
+import { UserNotesService } from './services/user-notes.service';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { NotesComparisonComponent } from './components/notes-comparison/notes-co
     ApiService,
     TastingProgressService,
     SessionService,
+    UserNotesService,
   ],
   bootstrap: [AppComponent]
 })
