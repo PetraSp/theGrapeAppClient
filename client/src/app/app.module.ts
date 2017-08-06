@@ -24,6 +24,7 @@ import { TastingProgressService } from './services/tasting-progress.service';
 import { RouterButtonComponent } from './components/tasting/router-button/router-button.component';
 import { InstructionsComponent } from './components/tasting/appearance/instructions/instructions.component';
 import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
+import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ColorSchemaComponent } from './components/tasting/appearance/color-sche
     RouterButtonComponent,
     InstructionsComponent,
     ColorSchemaComponent,
+    TastingIntroComponent,
   ],
   imports: [
     BrowserModule,
