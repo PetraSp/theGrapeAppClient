@@ -31,6 +31,7 @@ import { RedFruitComponent } from './components/tasting/red-fruit/red-fruit.comp
 import { BlackFruitComponent } from './components/tasting/black-fruit/black-fruit.component';
 import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-fruit.component';
 import { HerbsComponent } from './components/tasting/herbs/herbs.component';
+import { NotesComparisonComponent } from './components/notes-comparison/notes-comparison.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { HerbsComponent } from './components/tasting/herbs/herbs.component';
     BlackFruitComponent,
     DriedFruitComponent,
     HerbsComponent,
+    NotesComparisonComponent,
   ],
   imports: [
     BrowserModule,
