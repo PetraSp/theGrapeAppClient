@@ -1,6 +1,7 @@
 
-
-<button (click)='getPreviousRoute()'>Go To Previous Route</button>
+<div *ngIf = "location != '/tasting/intro' ">
+  <button (click)='getPreviousRoute()'>Go To Previous Route</button>
+</div>
 
 <div *ngIf = "location != '/tasting/palate/quirky' ">
   <button (click)='getNextRoute()'>Go To Next Route</button>
