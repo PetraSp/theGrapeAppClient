@@ -19,6 +19,8 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'scan', component: ScanComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'tasting/intro', component: TastingComponent },
   { path: 'tasting/appearance/instructions', component: TastingComponent },
   { path: 'tasting/appearance/colorSchema', component: TastingComponent },
