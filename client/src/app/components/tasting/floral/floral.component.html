@@ -6,18 +6,12 @@
 <p>Select the aromas <br>you have decided:</p>
 
  <div class="floralComponentOptions">
-   <button (click)="sendUserResponse('rose')">Rose</button>
-   <button (click)="sendUserResponse('violet')">Violet</button>
-   <button (click)="sendUserResponse('potpourri')">Potpourri</button>
-   <button (click)="sendUserResponse('floral')">Floral/Perfumed</button>
-   <button (click)="sendUserResponse('')">I can't smell any flowers</button>
-	<!-- <input type=radio (click)="sendUserResponse('rose')" class="options" value="Rose">
-	<input type=radio (click)="sendUserResponse('violet')" class="options" value="Violet">
-	<input type=radio (click)="sendUserResponse('potpourri')" class="options" value="Potpourri">
-	<input type=radio (click)="sendUserResponse('floral')" class="options" value="Perfumed/Floral">
-	<input type=radio (click)="sendUserResponse('')" class="options" value="I can't smell any flowers"> -->
-</div>
+   <button (click)="userInputToggle('rose')">Rose</button>
+   <button (click)="userInputToggle('violet')">Violet</button>
+   <button (click)="userInputToggle('potpourri')">Potpourri</button>
+   <button (click)="userInputToggle('floral')">Perfumed/Floral</button>
+   <button (click)="userInputToggle('')">I can't smell any flowers</button>
+</div> 
 
-  <div *ngIf="isActive">
-    <h1>Hello!</h1>
-  </div>
+<button (click)="addToUserNotesObject()">Submit</button>
+

@@ -1,3 +1,17 @@
-<p>
-  red-fruit works!
-</p>
+
+<h3>Red Fruit Aromas</h3>
+
+<img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/redFruit.svg" alt="Picture of red fruit aromas... Yummy!">
+
+<p>Select the aromas <br>you have decided:</p>
+
+ <div class="redFruitComponentOptions">
+   <button (click)="userInputToggle('berry')">Berry</button>
+   <button (click)="userInputToggle('redberry')">Redberry</button>
+   <button (click)="userInputToggle('fairyFromAnotherBerry')">Fairy from another Berry</button>
+   <button (click)="userInputToggle('redFruityness')">Red Fruityness</button>
+   <button (click)="userInputToggle('')">I can't smell no red fruits! I just had a curry!</button>
+</div> 
+
+<button (click)="addToUserNotesObject()">Submit</button>
+<button (click)="callAssemble()">Assemble</button>
