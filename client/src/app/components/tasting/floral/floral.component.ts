@@ -1,3 +1,4 @@
+/*jshint esversion: 6*/
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class FloralComponent implements OnInit {
 
   floralResponse: Array<string> = [];
 
-  isActive: boolean = false;
+  isActive = false;
 
   constructor() { }
 
@@ -21,7 +22,16 @@ export class FloralComponent implements OnInit {
   }
 
   sendUserResponse(floral) {
-    this.floralResponse.push(floral);
+    // Check to see incoming variable is part of the array.
+    const isInArray = this.floralResponse.some((attribute) => {
+      return attribute === floral;
+    });
+    if (!isInArray) {
+      this.floralResponse.push(floral);
+    } else {
+      const floralIndex = this.floralResponse.indexOf(floral);
+      this.floralResponse.splice(floralIndex, 1);
+    }
     console.log('this.floralResponse', this.floralResponse);
   }
 }
