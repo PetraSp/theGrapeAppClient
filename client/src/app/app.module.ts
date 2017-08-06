@@ -26,6 +26,9 @@ import { InstructionsComponent } from './components/tasting/instructions/instruc
 import { ColorSchemaComponent } from './components/tasting/appearance/color-schema/color-schema.component';
 import { SignupComponent } from './components/user-components/signup/signup.component';
 import { LoginComponent } from './components/user-components/login/login.component';
+import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
+import { NotesComponent } from './components/notes/notes.component';
+import { QuirkyComponent } from './components/tasting/palate/quirky/quirky.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { LoginComponent } from './components/user-components/login/login.compone
     NavbarComponent,
     ScanComponent,
     ProfileComponent,
+    TastingIntroComponent,
     TastingComponent,
     AppearanceComponent,
     NoseComponent,
@@ -44,6 +48,8 @@ import { LoginComponent } from './components/user-components/login/login.compone
     ColorSchemaComponent,
     SignupComponent,
     LoginComponent,
+    NotesComponent,
+    QuirkyComponent,
   ],
   imports: [
     BrowserModule,
