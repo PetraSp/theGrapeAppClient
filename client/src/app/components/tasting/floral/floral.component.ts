@@ -1,3 +1,4 @@
+/*jshint esversion: 6*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
