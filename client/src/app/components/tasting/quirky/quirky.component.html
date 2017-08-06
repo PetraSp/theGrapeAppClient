@@ -2,4 +2,6 @@
   quirky works!
 </p>
 
-<button [routerLink]="['/notes']">Go to Results</button>
+<div *ngIf = "location == '/tasting/palate/quirky' ">
+  <button [routerLink]="['/notes']">Go to Results</button>
+<div>
