@@ -11,6 +11,7 @@ import { TastingComponent } from './components/tasting/tasting.component';
 import { InstructionsComponent} from './components/tasting/instructions/instructions.component';
 import { ColorSchemaComponent } from './components/tasting//color-schema/color-schema.component';
 import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
+import { NotesComponent } from './components/notes/notes.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +36,8 @@ export const routes: Routes = [
   { path: 'tasting/palate/driedFruit', component: TastingComponent },
   { path: 'tasting/palate/herbs', component: TastingComponent },
   { path: 'tasting/palate/quirky', component: TastingComponent },
+  { path: 'notes', component: NotesComponent },
+
 
 
 
