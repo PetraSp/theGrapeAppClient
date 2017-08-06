@@ -1,9 +1,20 @@
-
-<div *ngIf = "location == '/tasting' ">
+<div *ngIf = "location == '/tasting/intro' ">
   <p>Tasting Page</p>
 </div>
 
 <div *ngIf = "location == '/tasting/appearance/instructions' ">
+   <app-instructions></app-instructions>
+</div>
+
+<div *ngIf = "location == '/tasting/appearance/colorSchema' ">
+  <app-color-schema></app-color-schema>
+</div>
+
+<div *ngIf = "location == '/tasting/nose/instructions' ">
+    <app-instructions></app-instructions>
+</div>
+
+<div *ngIf = "location == '/tasting/palate/instructions' ">
   <app-instructions></app-instructions>
 </div>
 
