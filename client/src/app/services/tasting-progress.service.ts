@@ -23,7 +23,7 @@ export class TastingProgressService {
     'palate/quirky',
   ];
 
-  currentRouteId= -1;
+  currentRouteId= 0;
   test;
 
   constructor(private router: Router) { }
