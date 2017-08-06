@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Injectable()
 export class TastingProgressService {
   routes: Array<string> = [
+    'intro',
     'appearance/instructions',
     'appearance/colorSchema',
     'nose/instructions',
