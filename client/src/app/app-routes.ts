@@ -12,6 +12,7 @@ import { InstructionsComponent} from './components/tasting/instructions/instruct
 import { ColorSchemaComponent } from './components/tasting//color-schema/color-schema.component';
 import { TastingIntroComponent } from './components/tasting/tasting-intro/tasting-intro.component';
 import { NotesComponent } from './components/notes/notes.component';
+import { NotesComparisonComponent} from './components/notes-comparison/notes-comparison.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,6 +38,7 @@ export const routes: Routes = [
   { path: 'tasting/palate/herbs', component: TastingComponent },
   { path: 'tasting/palate/quirky', component: TastingComponent },
   { path: 'notes', component: NotesComponent },
+  { path: 'notesComparison', component: NotesComparisonComponent },
 
 
 
