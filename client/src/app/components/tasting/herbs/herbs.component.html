@@ -1,6 +1,6 @@
 
 <!-- ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### -->
-<div *ngIf = "location == '/tasting/nose/floral' ">
+<div *ngIf = "location == '/tasting/nose/herbs' ">
   <h3>Herbal Aromas</h3>
   <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral aromas... Mmmmmmh!">
   <p>Select the aromas <br>you have decided:</p>
@@ -8,7 +8,7 @@
 
 
 <!-- ######### PALATE ######### PALATE ######### PALATE ######### PALATE ######### PALATE ######### -->
-<div *ngIf = "location == '/tasting/palate/floral' ">
+<div *ngIf = "location == '/tasting/palate/herbs' ">
     <h3>Herbal Tastes</h3>
     <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral tastes... Yummy!">
     <p>Select the flavours <br>you have detected:</p>
@@ -17,16 +17,16 @@
 
 
  <div class="floralComponentOptions">
-   <button (click)="userInputToggle('rose')">Blackcurrant Leaf</button>
-   <button (click)="userInputToggle('violet')">Tomato Leaf</button>
-   <button (click)="userInputToggle('potpourri')">Black Pepper</button>
-   <button (click)="userInputToggle('floral')">Grass</button>
-   <button (click)="userInputToggle('potpourri')">Clove</button>
-   <button (click)="userInputToggle('floral')">Vanilla</button>
-   <button (click)="userInputToggle('potpourri')">Rosemary</button>
-   <button (click)="userInputToggle('floral')">Cinnamon</button>
-   <button (click)="userInputToggle('potpourri')">Pungent Aromas</button>
-   <button (click)="userInputToggle('floral')">Wood Aromas</button>
+   <button (click)="userInputToggle('blackcurrant leaf')">Blackcurrant Leaf</button>
+   <button (click)="userInputToggle('tomato leaf')">Tomato Leaf</button>
+   <button (click)="userInputToggle('black pepper')">Black Pepper</button>
+   <button (click)="userInputToggle('grass')">Grass</button>
+   <button (click)="userInputToggle('clove')">Clove</button>
+   <button (click)="userInputToggle('vanilla')">Vanilla</button>
+   <button (click)="userInputToggle('rosemary')">Rosemary</button>
+   <button (click)="userInputToggle('cinnamon')">Cinnamon</button>
+   <button (click)="userInputToggle('pungent aromas')">Pungent Aromas</button>
+   <button (click)="userInputToggle('wood aromas')">Wood Aromas</button>
 </div> 
 
 <button (click)="addToUserNotesObject()">Submit</button>

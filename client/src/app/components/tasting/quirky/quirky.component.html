@@ -5,14 +5,14 @@
   <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/quirky.svg" alt="Picture of quirky aromas... Mmmmmmh!">
   <p>Select the aromas <br>you have decided:</p>
   <div class="quirkyComponentOptions">
-      <button (click)="userInputToggle('rose')">Toffee</button>
-      <button (click)="userInputToggle('violet')">Mushroom</button>
-      <button (click)="userInputToggle('potpourri')">Chocolate</button>
-      <button (click)="userInputToggle('floral')">Wet Leaves</button>
-      <button (click)="userInputToggle('potpourri')">Coffee</button>
-      <button (click)="userInputToggle('floral')">Forest Floor</button>
-      <button (click)="userInputToggle('potpourri')">Meat/Leather</button>
-      <button (click)="userInputToggle('floral')">Chemical</button>
+      <button (click)="userInputToggle('toffee')">Toffee</button>
+      <button (click)="userInputToggle('mushroom')">Mushroom</button>
+      <button (click)="userInputToggle('chocolate')">Chocolate</button>
+      <button (click)="userInputToggle('wet leaves')">Wet Leaves</button>
+      <button (click)="userInputToggle('coffee')">Coffee</button>
+      <button (click)="userInputToggle('forest floor')">Forest Floor</button>
+      <button (click)="userInputToggle('meat/leather')">Meat/Leather</button>
+      <button (click)="userInputToggle('chemical')">Chemical</button>
   </div> 
   <button (click)="addToUserNotesObject()">Submit</button> 
 </div>
@@ -24,14 +24,14 @@
     <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/quirky.svg" alt="Picture of quirky tastes... Yummy!">
     <p>Select the flavours <br>you have detected:</p>
     <div class="quirkyComponentOptions">
-        <button (click)="userInputToggle('rose')">Toffee</button>
-        <button (click)="userInputToggle('violet')">Mushroom</button>
-        <button (click)="userInputToggle('potpourri')">Chocolate</button>
-        <button (click)="userInputToggle('floral')">Wet Leaves</button>
-        <button (click)="userInputToggle('potpourri')">Coffee</button>
-        <button (click)="userInputToggle('floral')">Forest Floor</button>
-        <button (click)="userInputToggle('potpourri')">Meat/Leather</button>
-        <button (click)="userInputToggle('floral')">Chemical</button>
+        <button (click)="userInputToggle('toffee')">Toffee</button>
+        <button (click)="userInputToggle('mushroom')">Mushroom</button>
+        <button (click)="userInputToggle('chocolate')">Chocolate</button>
+        <button (click)="userInputToggle('wet leaves')">Wet Leaves</button>
+        <button (click)="userInputToggle('coffee')">Coffee</button>
+        <button (click)="userInputToggle('forest floor')">Forest Floor</button>
+        <button (click)="userInputToggle('meat/leather')">Meat/Leather</button>
+        <button (click)="userInputToggle('chemical')">Chemical</button>
     </div> 
     <button (click)="addToUserNotesObject(); callAssemble();" [routerLink]="['/notes']">Go to Results</button>
 </div>
