@@ -12,11 +12,11 @@ export class FloralComponent implements OnInit {
 
   //make an array for the user input from the toggle buttons
   floralResponse = [];
+  location = '';
 
-  constructor(
-    private userNotes: UserNotesService,
-    private router: Router,
-  ) { }
+  constructor(private userNotes: UserNotesService, private router: Router) {
+    this.location = router.url;
+  }
 
   ngOnInit() {
   }
