@@ -1,3 +1,24 @@
-<p>
-  dried-fruit works!
-</p>
+// Nose
+<div *ngIf = "location == '/tasting/nose/driedFruit' ">
+  <h3>Dried Fruit Aromas</h3>
+  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/blackFruit.svg">
+  <p>Select the aromas you detect:</p>
+</div>
+
+// Palate
+<div *ngIf = "location == '/tasting/palate/driedFruit' ">
+  <h3>Dried Fruit Tastes</h3>
+  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/blackFruit.svg">
+  <p>Select the flavors you taste:</p>
+</div>
+
+ <div class="blackFruitComponentOptions">
+   <button (click)="userInputToggle('driedFigs')">Dried figs</button>
+   <button (click)="userInputToggle('jamminess')">Jamminess</button>
+   <button (click)="userInputToggle('prunes')">Prunes</button>
+   <button (click)="userInputToggle('baked')">Baked, stewed fruits</button>
+   <button (click)="userInputToggle('raisins')">Raisins</button>
+   <button (click)="userInputToggle('')">None</button>
+</div>
+
+<button (click)="addToUserNotesObject()">Submit</button>
