@@ -43,15 +43,10 @@ export class QuirkyComponent implements OnInit {
     console.log('this.quirkyResponse', this.quirkyResponse);
   }
 
-    addToUserNotesObject() {
+  addToUserNotesObject() {
     console.log('Color Schema data submitted.', this.quirkyResponse);
     
-    let quirkyData = {
-      palate: {
-        key: 'quirky', 
-        color: this.quirkyResponse
-      }
-    };
+    let quirkyData = { palate: { key: 'quirky', value: this.quirkyResponse }};
 
     console.log('quirkyData:', JSON.stringify(quirkyData));
     console.log('Mr Key:', Object.keys(quirkyData).join(''));
