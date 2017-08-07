@@ -29,7 +29,12 @@ export class DriedFruitComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     //if false, add
-    if (!isInArray) { this.driedFruitResponse.push(driedFruit); }
+    if (!isInArray) {
+      this.driedFruitResponse.push(driedFruit);
+      if (this.driedFruitResponse[this.driedFruitResponse.length-1] ==='none') {
+        this.driedFruitResponse = [''];
+      }
+    }
     //if true, find index in array and delete
     else {
       const driedFruitIndex = this.driedFruitResponse.indexOf(driedFruit);
