@@ -1,5 +1,7 @@
 
-<h3>Floral Aromas</h3>
+<!-- ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### -->
+<div *ngIf = "location == '/tasting/nose/floral' ">
+  <h3>Floral Aromas</h3>
 
 <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral aromas... Mmmmmmh!">
 
@@ -14,4 +16,24 @@
 </div> 
 
 <button (click)="addToUserNotesObject()">Submit</button>
+</div>
 
+<!-- ######### PALATE ######### PALATE ######### PALATE ######### PALATE ######### PALATE ######### -->
+
+<div *ngIf = "location == '/tasting/palate/floral' ">
+    <h3>Floral Tastes</h3>
+
+<img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral aromas... Mmmmmmh!">
+
+<p>Select the flavours <br>you have detected:</p>
+
+ <div class="floralComponentOptions">
+   <button (click)="userInputToggle('rose')">Rose</button>
+   <button (click)="userInputToggle('violet')">Violet</button>
+   <button (click)="userInputToggle('potpourri')">Potpourri</button>
+   <button (click)="userInputToggle('floral')">Perfumed/Floral</button>
+   <button (click)="userInputToggle('')">I can't taste any flowers</button>
+</div> 
+
+<button (click)="addToUserNotesObject()">Submit</button>
+</div>
