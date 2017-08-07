@@ -39,7 +39,7 @@ export class BlackFruitComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    console.log('Floral data submitted.', this.blackFruitResponse);
+    console.log('Black Fruit data submitted.', this.blackFruitResponse);
     let blackFruitData = {key: 'blackFruit', value: this.blackFruitResponse};
     this.userNotes.storeTastingData(blackFruitData);
   }
