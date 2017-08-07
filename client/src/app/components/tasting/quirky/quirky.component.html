@@ -4,6 +4,17 @@
   <h3>Quirky Aromas</h3>
   <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/quirky.svg" alt="Picture of quirky aromas... Mmmmmmh!">
   <p>Select the aromas <br>you have decided:</p>
+  <div class="quirkyComponentOptions">
+      <button (click)="userInputToggle('rose')">Toffee</button>
+      <button (click)="userInputToggle('violet')">Mushroom</button>
+      <button (click)="userInputToggle('potpourri')">Chocolate</button>
+      <button (click)="userInputToggle('floral')">Wet Leaves</button>
+      <button (click)="userInputToggle('potpourri')">Coffee</button>
+      <button (click)="userInputToggle('floral')">Forest Floor</button>
+      <button (click)="userInputToggle('potpourri')">Meat/Leather</button>
+      <button (click)="userInputToggle('floral')">Chemical</button>
+  </div> 
+  <button (click)="addToUserNotesObject()">Submit</button> 
 </div>
 
 
@@ -12,17 +23,17 @@
     <h3>Quirky Tastes</h3>
     <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/quirky.svg" alt="Picture of quirky tastes... Yummy!">
     <p>Select the flavours <br>you have detected:</p>
+    <div class="quirkyComponentOptions">
+        <button (click)="userInputToggle('rose')">Toffee</button>
+        <button (click)="userInputToggle('violet')">Mushroom</button>
+        <button (click)="userInputToggle('potpourri')">Chocolate</button>
+        <button (click)="userInputToggle('floral')">Wet Leaves</button>
+        <button (click)="userInputToggle('potpourri')">Coffee</button>
+        <button (click)="userInputToggle('floral')">Forest Floor</button>
+        <button (click)="userInputToggle('potpourri')">Meat/Leather</button>
+        <button (click)="userInputToggle('floral')">Chemical</button>
+    </div> 
+    <button (click)="addToUserNotesObject(); callAssemble();" [routerLink]="['/notes']">Go to Results</button>
 </div>
 
 
-
- <div class="quirkyComponentOptions">
-   <button (click)="userInputToggle('rose')">Rose</button>
-   <button (click)="userInputToggle('violet')">Violet</button>
-   <button (click)="userInputToggle('potpourri')">Potpourri</button>
-   <button (click)="userInputToggle('floral')">Perfumed/floral</button>
-   <button (click)="userInputToggle('')">None</button>
-</div> 
-
-<!-- <button (click)="addToUserNotesObject()">Submit</button> -->
-<button (click)="addToUserNotesObject(); callAssemble();" [routerLink]="['/notes']">Go to Results</button>
