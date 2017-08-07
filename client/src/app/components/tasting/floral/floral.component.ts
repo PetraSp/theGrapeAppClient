@@ -23,21 +23,29 @@ export class FloralComponent implements OnInit {
 
   // define toggle function for button
   userInputToggle(floral) {
-    //check if floral is in array
+    // check if floral is in array
     console.log('floral', floral);
     const isInArray = this.floralResponse.some((userResponse) => {
       return userResponse === floral;
     });
     console.log('isInArray', isInArray);
-    //if false, add
-    if (!isInArray) { this.floralResponse.push(floral); }
-    //if true, find index in array and delete
-    else { 
-      const floralIndex = this.floralResponse.indexOf(floral);
-      this.floralResponse.splice(floralIndex, 1);
+    // if false, add
+
+    if (!isInArray) {
+      this.floralResponse.push(floral);
+      console.log("if is in array")
+      if (this.floralResponse[this.floralResponse.length-1] === 'none') {
+        this.floralResponse = [''];
+        console.log("working");
+      }
     }
-    console.log('this.floralResponse', this.floralResponse);
-  }
+      // if true, find index in array and delete
+      else {
+        const floralIndex = this.floralResponse.indexOf(floral);
+        this.floralResponse.splice(floralIndex, 1);
+      }
+      console.log('this.floralResponse', this.floralResponse);
+    }
 
   addToUserNotesObject() {
     console.log('Floral data submitted.', this.floralResponse);
