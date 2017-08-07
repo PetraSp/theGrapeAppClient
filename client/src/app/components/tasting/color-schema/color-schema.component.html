@@ -1,35 +1,44 @@
 <div class="color-schema">
+  <ul class="color-header">
+    <li>Pale</li>
+    <li>Medium</li>
+    <li>Deep</li>
+  </ul>
   <ul>
     <li class="color-row purple">
-      <button class="color-box pale"></button>
-      <button class="color-box medium"></button>
-      <button class="color-box deep"></button>
+      <button class="color-box pale" (click)="userInputToggle('purple','pale')"></button>
+      <button class="color-box deep" (click)="userInputToggle('purple', 'medium')"></button>
+      <button class="color-box deep" (click)="userInputToggle('purple', 'deep')"></button>
+      <h3>Purple</h3>
     </li>
     <li class="color-row ruby">
-      <button class="color-box pale"></button>
-      <button class="color-box medium"></button>
-      <button class="color-box deep"></button>
+      <button class="color-box pale" (click)="userInputToggle('ruby','pale')"></button>
+      <button class="color-box medium" (click)="userInputToggle('ruby','medium')"></button>
+      <button class="color-box deep" (click)="userInputToggle('ruby','deep')"></button>
+      <h3>Ruby</h3>
     </li>
     <li class="color-row garnet">
-      <button class="color-box pale"></button>
-      <button class="color-box medium"></button>
-      <button class="color-box deep"></button>
+      <button class="color-box pale" (click)="userInputToggle('garnet','pale')"></button>
+      <button class="color-box medium" (click)="userInputToggle('garnet','medium')"></button>
+      <button class="color-box deep" (click)="userInputToggle('garnet','deep')"></button>
+      <h3>Garnet</h3>
     </li>
     <li class="color-row tawny">
-      <button class="color-box pale"></button>
-      <button class="color-box medium"></button>
-      <button class="color-box deep"></button>
+      <button class="color-box pale" (click)="userInputToggle('tawny','pale')"></button>
+      <button class="color-box medium" (click)="userInputToggle('tawny','medium')"></button>
+      <button class="color-box deep" (click)="userInputToggle('tawny','depp')"></button>
+      <h3>Tawny</h3>
     </li>
   </ul>
 
 </div>
 
-<button (click)="userInputToggle('pale')">Pale</button>
+<!-- <button (click)="userInputToggle('pale')">Pale</button>
 <button (click)="userInputToggle('medium')">Medium</button>
 <button (click)="userInputToggle('deep')">Deep</button>
 <button (click)="userInputToggle('purple')">Purple</button>
 <button (click)="userInputToggle('garnet')">Garnet</button>
-<button (click)="userInputToggle('tawny')">Tawny</button>
+<button (click)="userInputToggle('tawny')">Tawny</button> -->
 
 
 <button (click)="addToUserNotesObject()">Done, on to nose</button>
