@@ -44,9 +44,4 @@ export class RedFruitComponent implements OnInit {
     this.userNotes.storeTastingData(redFruitData);
   }
 
-  callAssemble() {
-    console.log('callAssemble called.');
-    this.userNotes.assembleTastingNotes();
-  }
-
 }
