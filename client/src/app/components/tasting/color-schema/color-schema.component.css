@@ -1,0 +1,38 @@
+.color-schema {
+  display: flex;
+  width: 100%;
+}
+
+.color-schema ul {
+  width: 100%;
+}
+
+.color-row {
+  height: 18vh;
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+  width: 100;
+}
+
+.color-row .color-box {
+  border: none;
+  height: 100%;
+  width: 32%;
+}
+
+.color-row.purple .color-box.pale   { background-color: rgb(50, 30, 62)}
+.color-row.purple .color-box.medium { background-color: #321E3E}
+.color-row.purple .color-box.deep   { background-color: #321E3E}
+
+.color-row.ruby .color-box.pale     { background-color: #7A002E}
+.color-row.ruby .color-box.medium   { background-color: #7A002E}
+.color-row.ruby .color-box.deep     { background-color: #321E3E}
+
+.color-row.garnet .color-box.pale   { background-color: #321E3E}
+.color-row.garnet .color-box.medium { background-color: #960502}
+.color-row.garnet .color-box.deep   { background-color: #321E3E}
+
+.color-row.tawny .color-box.pale    { background-color: #321E3E}
+.color-row.tawny .color-box.medium  { background-color: #5E3608}
+.color-row.tawny .color-box.deep    { background-color: #321E3E}
