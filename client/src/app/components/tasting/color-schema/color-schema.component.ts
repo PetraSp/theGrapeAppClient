@@ -34,9 +34,16 @@ export class ColorSchemaComponent implements OnInit {
 
   addToUserNotesObject() {
     console.log('Color Schema data submitted.', this.colorResponse);
-    let colorSchemaData = {appearance: {key: 'color', value: this.colorResponse}};
-    console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
     
+    let colorSchemaData = {
+      appearance: {
+        key: 'color', 
+        color: this.colorResponse
+      }
+    };
+
+    console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
+    console.log('Mr Key:', Object.keys(colorSchemaData).join(''));
     this.userNotes.storeTastingData(colorSchemaData);
   }
 }

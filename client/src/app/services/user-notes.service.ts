@@ -11,13 +11,20 @@ export class UserNotesService {
   BASE_URL: string = 'http://localhost:3000';
   notes;  // Notes object
   arrayOfData = []; // Array to store ongoing data during the tasting test
+  /* [
+    {appearance: {key: color, value: [color1, color2]}},
+    {nose: {key: floral, value: smell}},
+    {palate: {key: redFruit, value: berry}},
+    {palate: {key: driedFruit, value: nut}},
+  ]
+  */
 
   constructor(private http: Http, ) { }
 
   // Push ongoing data from tasting test into arrayOfData to store
   storeTastingData(data) {
     this.arrayOfData.push(data);
-    console.log(this.arrayOfData);
+    console.log(JSON.stringify(this.arrayOfData));
   }
 
   // Function which activates on SUBMIT TEST at the end.
@@ -25,17 +32,23 @@ export class UserNotesService {
   assembleTastingNotes() {
     // PSEUDO-CODE
     /*
-      For each entry in the array of data.
+      For each entry in the array of data. {
         Access data.key and make it a notes object key
-        Access data.value and make it a notes value of its corresponding key.
-
+        For each value of this key: {
+          Access data.value and make it a notes value of its corresponding key.
+        }
       return notes object
+      }
     */
     let notes = {};
-    this.arrayOfData.forEach((testData) => {
-      console.log(testData);
-      notes[testData.key] = testData.value;
+    this.arrayOfData.forEach((dataObject) => {
+
     });
+    // let notes = {};
+    // this.arrayOfData.forEach((parentKey) => {
+    //   console.log(parentKey);
+    //   notes[parentKey.key] = parentKey.value;
+    // });
     console.log(JSON.stringify(notes));
   }
 
@@ -65,4 +78,18 @@ export class UserNotesService {
     //     dryFruit: 'String',
     //     herbsSpices: 'String',
     //     quirky: 'String' }
+    //   }
+
+
+
+
+// this.notes = {
+    //     intensity: 'String',
+    //     color: 'String'},
+    //     floral: data.floral,
+    //     redFruit: 'String',
+    //     blackFruit: 'String',
+    //     dryFruit: 'String',
+    //     herbsSpices: 'String',
+    //     quirky: 'String' },
     //   }

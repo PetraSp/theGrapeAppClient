@@ -44,8 +44,10 @@ export class HerbsComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    console.log('herbs data submitted.', this.herbsResponse);
-    let herbsData = {key: 'herbs', value: this.herbsResponse};
+    console.log('Color Schema data submitted.', this.herbsResponse);
+    let herbsData = { palate: { key: 'herbs', color: this.herbsResponse }};
+    console.log('herbsData:', JSON.stringify(herbsData));
+    console.log('Mr Key:', Object.keys(herbsData).join(''));
     this.userNotes.storeTastingData(herbsData);
   }
 

@@ -43,9 +43,18 @@ export class QuirkyComponent implements OnInit {
     console.log('this.quirkyResponse', this.quirkyResponse);
   }
 
-  addToUserNotesObject() {
-    console.log('quirky data submitted.', this.quirkyResponse);
-    let quirkyData = {key: 'quirky', value: this.quirkyResponse};
+    addToUserNotesObject() {
+    console.log('Color Schema data submitted.', this.quirkyResponse);
+    
+    let quirkyData = {
+      palate: {
+        key: 'quirky', 
+        color: this.quirkyResponse
+      }
+    };
+
+    console.log('quirkyData:', JSON.stringify(quirkyData));
+    console.log('Mr Key:', Object.keys(quirkyData).join(''));
     this.userNotes.storeTastingData(quirkyData);
   }
 
