@@ -29,7 +29,11 @@ export class BlackFruitComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     //if false, add
-    if (!isInArray) { this.blackFruitResponse.push(blackFruit); }
+    if (!isInArray) {
+      this.blackFruitResponse.push(blackFruit);
+      if (this.blackFruitResponse[this.blackFruitResponse.length-1] ==='none') {
+        this.blackFruitResponse = [''];
+      }}
     //if true, find index in array and delete
     else {
       const blackFruitIndex = this.blackFruitResponse.indexOf(blackFruit);

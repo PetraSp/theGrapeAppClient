@@ -29,9 +29,14 @@ export class RedFruitComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     //if false, add
-    if (!isInArray) { this.redFruitResponse.push(redFruit); }
+    if (!isInArray) {
+      this.redFruitResponse.push(redFruit);
+      if (this.redFruitResponse[this.redFruitResponse.length-1] ==='none') {
+        this.redFruitResponse = [''];
+      }
+    }
     //if true, find index in array and delete
-    else { 
+    else {
       const redFruitIndex = this.redFruitResponse.indexOf(redFruit);
       this.redFruitResponse.splice(redFruitIndex, 1);
     }

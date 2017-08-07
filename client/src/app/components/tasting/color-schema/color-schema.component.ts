@@ -11,7 +11,7 @@ import { UserNotesService } from '../../../services/user-notes.service';
 export class ColorSchemaComponent implements OnInit {
 
   //make an array for the user input from the toggle buttons
-  floralResponse = [];
+  colorResponse = [];
   location = '';
 
   constructor(private userNotes: UserNotesService, private router: Router) {
@@ -22,26 +22,21 @@ export class ColorSchemaComponent implements OnInit {
   }
 
   // define toggle function for button
-  userInputToggle(ColorSchema) {
-    //check if floral is in array
-    console.log('ColorSchema', ColorSchema);
-    const isInArray = this.floralResponse.some((userResponse) => {
-      return userResponse === ColorSchema;
-    });
-    console.log('isInArray', isInArray);
-    //if false, add
-    if (!isInArray) { this.floralResponse.push(ColorSchema); }
-    //if true, find index in array and delete
-    else {
-      const floralIndex = this.floralResponse.indexOf(ColorSchema);
-      this.floralResponse.splice(floralIndex, 1);
+  userInputToggle(colorName, colorRange) {
+    console.log(colorName, colorRange)
+    const colorRangeArray =[colorName, colorRange];
+
+    if (this.colorResponse.length === 1) {
+      this.colorResponse.shift();
     }
-    console.log('this.floralResponse', this.floralResponse);
+    this.colorResponse.push(colorRangeArray)
+
+    console.log(JSON.stringify(this.colorResponse))
   }
 
   addToUserNotesObject() {
-    console.log('Floral data submitted.', this.floralResponse);
-    let floralData = {key: 'floral', value: this.floralResponse};
+    console.log('Floral data submitted.', this.colorResponse);
+    let floralData = {key: 'floral', value: this.colorResponse};
     this.userNotes.storeTastingData(floralData);
   }
 }

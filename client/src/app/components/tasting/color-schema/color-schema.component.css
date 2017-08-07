@@ -1,38 +1,67 @@
-.color-schema {
+.color-schema,
+.color-row,
+.color-schema .color-header {
   display: flex;
   width: 100%;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .color-schema ul {
+  text-align: center;
   width: 100%;
+  padding: 0;
+}
+
+.color-schema li {
+  list-style-type: none;
+}
+
+.color-schema .color-header li {
+  width: 32%;
 }
 
 .color-row {
   height: 18vh;
-  list-style-type: none;
-  display: flex;
-  align-items: stretch;
-  width: 100;
+  margin-bottom: 30px;
 }
 
 .color-row .color-box {
-  border: none;
-  height: 100%;
+  border: 2px solid transparent;
+  height: 85%;
   width: 32%;
+  transition: border 300ms ease;
+}
+.color-row .color-box:hover {
+  cursor: pointer;
+  border: 2px solid #2196f3;
 }
 
-.color-row.purple .color-box.pale   { background-color: rgb(50, 30, 62)}
-.color-row.purple .color-box.medium { background-color: #321E3E}
-.color-row.purple .color-box.deep   { background-color: #321E3E}
+.color-schema .color-row h3 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
 
-.color-row.ruby .color-box.pale     { background-color: #7A002E}
-.color-row.ruby .color-box.medium   { background-color: #7A002E}
-.color-row.ruby .color-box.deep     { background-color: #321E3E}
+.color-row.purple .color-box.pale   { background-color: rgba(50, 30, 62, 100)}
+.color-row.purple .color-box.medium { background-color: rgba(50, 30, 62, .85)}
+.color-row.purple .color-box.deep   { background-color: rgba(50, 30, 62, .70)}
 
-.color-row.garnet .color-box.pale   { background-color: #321E3E}
-.color-row.garnet .color-box.medium { background-color: #960502}
-.color-row.garnet .color-box.deep   { background-color: #321E3E}
+.color-row.ruby .color-box.pale     { background-color: rgba(122, 0, 46, 100)}
+.color-row.ruby .color-box.medium   { background-color: rgba(122, 0, 46, .85)}
+.color-row.ruby .color-box.deep     { background-color: rgba(122, 0, 46, .70)}
 
-.color-row.tawny .color-box.pale    { background-color: #321E3E}
-.color-row.tawny .color-box.medium  { background-color: #5E3608}
-.color-row.tawny .color-box.deep    { background-color: #321E3E}
+.color-row.garnet .color-box.pale   { background-color: rgba(150, 5, 2, 100)}
+.color-row.garnet .color-box.medium { background-color: rgba(150, 5, 2, .85)}
+.color-row.garnet .color-box.deep   { background-color: rgba(150, 5, 2, .70)}
+
+.color-row.tawny .color-box.pale    { background-color: rgba(94, 54, 8, 100)}
+.color-row.tawny .color-box.medium  { background-color: rgba(94, 54, 8, .85)}
+.color-row.tawny .color-box.deep    { background-color: rgba(94, 54, 8, .70)}
