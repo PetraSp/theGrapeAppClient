@@ -28,7 +28,7 @@ export class UserNotesService {
       For each entry in the array of data.
         Access data.key and make it a notes object key
         Access data.value and make it a notes value of its corresponding key.
-      
+
       return notes object
     */
     let notes = {};

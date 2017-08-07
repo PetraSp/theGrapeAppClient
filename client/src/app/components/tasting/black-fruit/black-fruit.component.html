@@ -1,3 +1,14 @@
-<p>
-  black-fruit works!
-</p>
+<h3>Fresh Black Fruit</h3>
+
+<img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/floral.svg" alt="Picture of floral aromas... Mmmmmmh!">
+
+ <div class="blackFruitComponentOptions">
+   <button (click)="userInputToggle('blackcurrant')">Blackcurrant</button>
+   <button (click)="userInputToggle('blackplum')">Black plum</button>
+   <button (click)="userInputToggle('blackberry')">Blackberry</button>
+   <button (click)="userInputToggle('blackcherry')">Black cherry</button>
+   <button (click)="userInputToggle('blueberry')">Blueberry</button>
+   <button (click)="userInputToggle('')">None</button>
+</div>
+
+<button (click)="addToUserNotesObject()">Submit</button>
