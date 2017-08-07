@@ -17,4 +17,10 @@ export class QuirkyComponent implements OnInit {
   ngOnInit() {
   }
 
+  // callAssemble() {
+  //   console.log('callAssemble called.');
+  //   this.userNotes.assembleTastingNotes();
+  // }
+
+
 }
