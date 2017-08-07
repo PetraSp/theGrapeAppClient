@@ -47,6 +47,7 @@ export class UserNotesService {
   }
 }
 
+// THIS IS THE MODEL: ONLY FOR REFERENCE. CAN BE DELETED.
 // this.notes = {
     //   appearance: {
     //     intensity: 'String',
