@@ -1,4 +1,35 @@
-<p>
-  color-schema works!
-  test
-</p>
+<div class="color-schema">
+  <ul>
+    <li class="color-row purple">
+      <button class="color-box pale"></button>
+      <button class="color-box medium"></button>
+      <button class="color-box deep"></button>
+    </li>
+    <li class="color-row ruby">
+      <button class="color-box pale"></button>
+      <button class="color-box medium"></button>
+      <button class="color-box deep"></button>
+    </li>
+    <li class="color-row garnet">
+      <button class="color-box pale"></button>
+      <button class="color-box medium"></button>
+      <button class="color-box deep"></button>
+    </li>
+    <li class="color-row tawny">
+      <button class="color-box pale"></button>
+      <button class="color-box medium"></button>
+      <button class="color-box deep"></button>
+    </li>
+  </ul>
+
+</div>
+
+<button (click)="userInputToggle('pale')">Pale</button>
+<button (click)="userInputToggle('medium')">Medium</button>
+<button (click)="userInputToggle('deep')">Deep</button>
+<button (click)="userInputToggle('purple')">Purple</button>
+<button (click)="userInputToggle('garnet')">Garnet</button>
+<button (click)="userInputToggle('tawny')">Tawny</button>
+
+
+<button (click)="addToUserNotesObject()">Done, on to nose</button>
