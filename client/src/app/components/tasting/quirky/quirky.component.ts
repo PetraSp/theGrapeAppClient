@@ -29,9 +29,14 @@ export class QuirkyComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     //if false, add
-    if (!isInArray) { this.quirkyResponse.push(quirky); }
+    if (!isInArray) {
+      this.quirkyResponse.push(quirky);
+      if (this.quirkyResponse[this.quirkyResponse.length-1] ==='none') {
+        this.quirkyResponse = [''];
+      }
+    }
     //if true, find index in array and delete
-    else { 
+    else {
       const quirkyIndex = this.quirkyResponse.indexOf(quirky);
       this.quirkyResponse.splice(quirkyIndex, 1);
     }

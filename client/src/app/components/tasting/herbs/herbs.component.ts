@@ -29,9 +29,14 @@ export class HerbsComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     //if false, add
-    if (!isInArray) { this.herbsResponse.push(herbs); }
+    if (!isInArray) {
+      this.herbsResponse.push(herbs);
+      if (this.herbsResponse[this.herbsResponse.length-1] ==='none') {
+        this.herbsResponse = [''];
+      }
+    }
     //if true, find index in array and delete
-    else { 
+    else {
       const herbsIndex = this.herbsResponse.indexOf(herbs);
       this.herbsResponse.splice(herbsIndex, 1);
     }
