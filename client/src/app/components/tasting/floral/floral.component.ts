@@ -30,10 +30,8 @@ export class FloralComponent implements OnInit {
     });
     console.log('isInArray', isInArray);
     // if false, add
-
     if (!isInArray) {
       this.floralResponse.push(floral);
-      console.log("if is in array")
       if (this.floralResponse[this.floralResponse.length-1] === 'none') {
         this.floralResponse = [''];
         console.log("working");
