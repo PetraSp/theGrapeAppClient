@@ -23,20 +23,40 @@ export class ColorSchemaComponent implements OnInit {
 
   // define toggle function for button
   userInputToggle(colorName, colorRange) {
-    console.log(colorName, colorRange)
-    const colorRangeArray =[colorName, colorRange];
-
+    const colorRangeArray = [colorName, colorRange];
+    
     if (this.colorResponse.length === 1) {
       this.colorResponse.shift();
     }
     this.colorResponse.push(colorRangeArray)
-
     console.log(JSON.stringify(this.colorResponse))
   }
 
   addToUserNotesObject() {
-    console.log('Floral data submitted.', this.colorResponse);
-    let floralData = {key: 'floral', value: this.colorResponse};
-    this.userNotes.storeTastingData(floralData);
+    console.log('Color Schema data submitted.', this.colorResponse);
+    let colorSchemaData = {appearance: {key: 'color', value: this.colorResponse}};
+    console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
+    
+    this.userNotes.storeTastingData(colorSchemaData);
   }
 }
+
+// const notesSchema = {
+//   appearance: {
+//     intensity: String,
+//     color: String},
+//   nose: {
+//     floral: String,
+//     redFruit: String,
+//     blackFruit: String,
+//     dryFruit: String,
+//     herbsSpices: String,
+//     quirky: String },
+//   palate: {
+//     redFruit: String,
+//     blackFruit: String,
+//     dryFruit: String,
+//     herbsSpices: String,
+//     quirky: String }
+//   }
+// }
