@@ -4,6 +4,9 @@
   height: 45px;
   background-color: rgba(50, 30, 62, 100);
   align-items: center;
+  position: fixed;
+  bottom: 0px;
+
 }
 
 .images {
