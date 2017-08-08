@@ -1,13 +1,23 @@
 
-<div class="navbar">
-  <div *ngIf='hello; else login' class="images">
-    <a [routerLink]="['']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/home.svg" ></a>
-    <a [routerLink]="['/scan']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/camera.svg"></a>
-    <a [routerLink]="['/profile']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/user.svg" ></a>
+
+  <div class="navbar">
+    <div class="images">
+      <a [routerLink]="['']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/home.svg" ></a>
+      <a [routerLink]="['/scan']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/camera.svg"></a>
+      <a [routerLink]="['/profile']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/user.svg" ></a>
+    </div>
+  </div>
+
+
+
+<!-- <div *ngIf = "location == '/' ">
+  <div class="navbar">
+    <div class="images">
+      <a [routerLink]="['']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/home.svg" ></a>
+      <a [routerLink]="['/profile']"><img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/user.svg" ></a>
+    </div>
   </div>
   <ng-template #login>
     <p style='color: white;'>Please login to continue.</p>
   </ng-template>
-</div>
-
-
+</div> -->

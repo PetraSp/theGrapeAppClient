@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TastingProgressService } from '../../services/tasting-progress.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  previousRoute;
+  location = '';
+
+  constructor(private tastingProgress: TastingProgressService, private _router: Router) {
+    this.location = _router.url;
+  }
 
   ngOnInit() {
+  }
+
+  getPreviousRoute() {
+    this.previousRoute = this.tastingProgress.goToPreviousRoute();
   }
 
 }
