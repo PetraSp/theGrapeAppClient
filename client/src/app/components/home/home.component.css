@@ -1,0 +1,53 @@
+.container {
+
+}
+
+.video video{
+  width: 100%;
+}
+.quote {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote p:first-child {
+  margin-top: 15px;
+}
+.quote p:last-child {
+  margin-bottom: 10px;
+}
+
+.instructions {
+  margin-left: 10px;
+}
+
+.instructions p:first-child {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.instructions p {
+  margin-bottom: 10px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .wineName,
+  .section--instructions {
+    padding: 0 8%;
+  }
+  .video video {
+    height: 400px;
+  }
+  .line {
+    width: 84%;
+  }
+}
