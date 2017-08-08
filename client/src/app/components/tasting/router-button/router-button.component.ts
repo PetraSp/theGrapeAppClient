@@ -15,8 +15,8 @@ export class RouterButtonComponent implements OnInit {
   endRoute;
   location = '';
 
-  constructor(private tastingProgress: TastingProgressService, private router: Router, private _router: Router) {
-  this.location = _router.url;
+  constructor(private tastingProgress: TastingProgressService, private router: Router) {
+  this.location = router.url;
 }
 
   ngOnInit() {}
