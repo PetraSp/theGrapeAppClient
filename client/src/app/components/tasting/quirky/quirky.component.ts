@@ -44,8 +44,22 @@ export class QuirkyComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    console.log('quirky data submitted.', this.quirkyResponse);
-    let quirkyData = {key: 'quirky', value: this.quirkyResponse};
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    console.log('sliceLocation', sliceLocation);
+    console.log('this.location', this.location);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.quirkyResponse);
+    let quirkyData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.quirkyResponse }};
+
+    console.log('quirkyData:', JSON.stringify(quirkyData));
+    console.log('Mr Key:', Object.keys(quirkyData).join(''));
     this.userNotes.storeTastingData(quirkyData);
   }
 

@@ -23,20 +23,65 @@ export class ColorSchemaComponent implements OnInit {
 
   // define toggle function for button
   userInputToggle(colorName, colorRange) {
-    console.log(colorName, colorRange)
-    const colorRangeArray =[colorName, colorRange];
-
+    const colorRangeArray = [colorName, colorRange];
+    
     if (this.colorResponse.length === 1) {
       this.colorResponse.shift();
     }
-    this.colorResponse.push(colorRangeArray)
-
+    this.colorResponse.push(colorRangeArray);
     console.log(JSON.stringify(this.colorResponse))
   }
 
-  addToUserNotesObject() {
-    console.log('Floral data submitted.', this.colorResponse);
-    let floralData = {key: 'floral', value: this.colorResponse};
-    this.userNotes.storeTastingData(floralData);
+  // addToUserNotesObject() {
+  //   console.log('Color Schema data submitted.', this.colorResponse);
+    
+  //   let colorSchemaData = {
+  //     appearance: {
+  //       key: 'color', 
+  //       color: this.colorResponse
+  //     }
+  //   };
+
+  //   console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
+  //   console.log('Mr Key:', Object.keys(colorSchemaData).join(''));
+  //   this.userNotes.storeTastingData(colorSchemaData);
+  // }
+
+    addToUserNotesObject() {
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.colorResponse);
+    let colorSchemaData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.colorResponse[0] }}; // Change if things BREAK!
+
+    console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
+    console.log('Mr Key:', Object.keys(colorSchemaData).join(''));
+    this.userNotes.storeTastingData(colorSchemaData);
   }
 }
+
+// const notesSchema = {
+//   appearance: {
+//     intensity: String,
+//     color: String},
+//   nose: {
+//     floral: String,
+//     redFruit: String,
+//     blackFruit: String,
+//     dryFruit: String,
+//     herbsSpices: String,
+//     quirky: String },
+//   palate: {
+//     redFruit: String,
+//     blackFruit: String,
+//     dryFruit: String,
+//     herbsSpices: String,
+//     quirky: String }
+//   }
+// }
