@@ -17,24 +17,45 @@ export class UserNotesService {
   // Push ongoing data from tasting test into arrayOfData to store
   storeTastingData(data) {
     this.arrayOfData.push(data);
-    console.log(this.arrayOfData);
+    console.log(JSON.stringify(this.arrayOfData));
   }
 
   // Function which activates on SUBMIT TEST at the end.
   // Assembles the object before sending to database.
   assembleTastingNotes() {
-    // PSEUDO-CODE
-    /*
-      For each entry in the array of data.
-        Access data.key and make it a notes object key
-        Access data.value and make it a notes value of its corresponding key.
 
-      return notes object
-    */
-    let notes = {};
-    this.arrayOfData.forEach((testData) => {
-      console.log(testData);
-      notes[testData.key] = testData.value;
+    let notes = {     // dataObject
+      appearance: {}, // Group
+      nose: {},       // Group
+      palate: {}      // Group
+    };
+
+    // loops through data Array
+    this.arrayOfData.forEach((dataObject) => {
+      // Find main key for matching subObject with group
+      const dataObjectKey = dataObject.group;
+      console.log('dataObjectKey', dataObjectKey);
+      // create subObject {key: value} from main dataObject
+      const data = dataObject.value
+      console.log('data', data);
+
+      // Find to which group the subObject belongs using dataObjectKey matching
+      if (dataObjectKey === 'appearance'){
+        // If match store in subObject in group
+        console.log('itsa appearance!!!');
+        notes.appearance[data.key] = data.value;
+      }
+      if (dataObjectKey === 'nose'){
+        console.log('itsa nose!!');
+        notes.nose[data.key] = data.value;
+      }
+      if (dataObjectKey === 'palate'){
+        console.log('itsa palate!!');
+        notes.palate[data.key] = data.value;
+      }
+      else {
+        console.log('There has been a massive error. Please check your sanity.');
+      }
     });
     console.log(JSON.stringify(notes));
   }
@@ -47,22 +68,18 @@ export class UserNotesService {
   }
 }
 
-// THIS IS THE MODEL: ONLY FOR REFERENCE. CAN BE DELETED.
-// this.notes = {
-    //   appearance: {
-    //     intensity: 'String',
-    //     color: 'String'},
-    //   nose: {
-    //     floral: data.floral,
-    //     redFruit: 'String',
-    //     blackFruit: 'String',
-    //     dryFruit: 'String',
-    //     herbsSpices: 'String',
-    //     quirky: 'String' },
-    //   palate: {
-    //     redFruit: 'String',
-    //     blackFruit: 'String',
-    //     dryFruit: 'String',
-    //     herbsSpices: 'String',
-    //     quirky: 'String' }
-    //   }
+
+
+// {
+//   "appearance": {
+//     "colorSchema":["ruby","pale"]
+//   },
+//   "nose":{
+//     "floral":["rose","violet"],
+//     "redFruit":["strawberry","red plum","raspberry","red cherry","cranberry"],
+//     "blackFruit":["","blackcurrant","black plum"],
+//     "driedFruit":["dried figs","jamminess","prunes","baked, stewed fruits","raisins"],
+//     "herbs":[""],
+//     "quirky":["mushroom","chocolate"]
+//   },
+//   "palate":{"floral":["violet","potpourri"],"redFruit":["red plum"],"blackFruit":["black plum"],"herbs":[],"quirky":["toffee","mushroom"]}}

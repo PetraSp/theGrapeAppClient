@@ -46,8 +46,20 @@ export class FloralComponent implements OnInit {
     }
 
   addToUserNotesObject() {
-    console.log('Floral data submitted.', this.floralResponse);
-    let floralData = {key: 'floral', value: this.floralResponse};
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.floralResponse);
+    let floralData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.floralResponse }};
+
+    console.log('floralData:', JSON.stringify(floralData));
+    console.log('Mr Key:', Object.keys(floralData).join(''));
     this.userNotes.storeTastingData(floralData);
   }
 }
