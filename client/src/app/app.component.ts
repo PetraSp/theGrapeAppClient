@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent {
   title = 'theGrapeApp';
+location;
 
-  constructor() {}
+  constructor(private route: Router) {
+    this.location = route.url;
+    console.log(this.location)
+  }
 
   ngOnInit () {}
 

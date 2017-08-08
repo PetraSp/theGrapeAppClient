@@ -33,6 +33,8 @@ import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-frui
 import { HerbsComponent } from './components/tasting/herbs/herbs.component';
 import { NotesComparisonComponent } from './components/notes-comparison/notes-comparison.component';
 import { UserNotesService } from './services/user-notes.service';
+import { LocationService } from './services/location.service';
+
 
 @NgModule({
   declarations: [
@@ -69,6 +71,7 @@ import { UserNotesService } from './services/user-notes.service';
     TastingProgressService,
     SessionService,
     UserNotesService,
+    LocationService,
   ],
   bootstrap: [AppComponent]
 })

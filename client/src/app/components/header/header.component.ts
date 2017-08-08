@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TastingProgressService } from '../../services/tasting-progress.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  location;
   previousRoute;
-  location = '';
+  title = 'The Grape App';
 
-  constructor(private tastingProgress: TastingProgressService, private _router: Router) {
-    this.location = _router.url;
+  constructor(private tastingProgress: TastingProgressService) {
   }
 
   ngOnInit() {
