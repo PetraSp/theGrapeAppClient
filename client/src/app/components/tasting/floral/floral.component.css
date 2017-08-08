@@ -3,22 +3,68 @@
   margin: 20px auto;
   position: relative;
   top: 25px;
+  font-weight: normal;
+  font-size: 25px;
+  width: 100%;
 }
 
 .floralComponentOptions {
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 50%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.floralComponentOptions button {
-  width: 65%;
+.floralComponentOptions .button {
+  width: 49%;
+  border: 1px solid grey;
+  border-radius: 0;
+  padding: .5em 1em;
+  background: transparent;
+  margin-bottom: 1em;
+  transition: all 300ms ease;
+  cursor: pointer;
 }
 
-    /*display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: flex-start;*/
+.floral-img {
+  border: 2px solid #999;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.floralComponentOptions .button.full-width {
+width: 100%;
+}
+
+.floralComponentOptions.aromas .button {
+  border-color: #89ABFB;
+}
+
+.floralComponentOptions.aromas .button:hover {
+  border-color: #89ABFB;
+  background-color: #89ABFB;
+  color: #fff;
+}
+
+
+.line {
+  display: block;
+  margin: auto;
+  border: 2px solid rgba(0,0,0, .07);
+  margin-bottom: 5em;
+  width: 92%;
+}
+
+.floral-container {
+  padding: 0 4%;
+}
+
+@media (min-width: 768px) {
+  .floral-container {
+    padding: 0 8%;
+  }
+
+  .line {
+    width: 84%;
+  }
+}
