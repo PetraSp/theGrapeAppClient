@@ -1,0 +1,24 @@
+.title {
+  color: #593E68;
+  margin: 20px auto;
+  position: relative;
+  top: 25px;
+}
+
+.floralComponentOptions {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.floralComponentOptions button {
+  width: 65%;
+}
+
+    /*display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;*/
