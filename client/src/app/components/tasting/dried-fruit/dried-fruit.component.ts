@@ -45,6 +45,7 @@ export class DriedFruitComponent implements OnInit {
 
   addToUserNotesObject() {
     // Slice and dice URL to get the group type from route
+    // quirky
     const sliceLocation = this.location.slice(9);
     const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
     const group = sliceLocation.slice(0, parsedLocation.index);

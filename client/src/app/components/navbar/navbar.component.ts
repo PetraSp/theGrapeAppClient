@@ -10,12 +10,12 @@ export class NavbarComponent implements OnInit {
 
   location;
   constructor(private _route: Router) {
-    this.location = _route;
+    this.location = _route.url;
   }
 
   ngOnInit() {
   }
 
-  hello: boolean = true;
+  hello: boolean = false;
   // hello: boolean = this.location === 'home';
 }
