@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocationService } from '../../services/location.service';
 
 @Component({
   selector: 'app-tasting',
@@ -11,7 +10,7 @@ export class TastingComponent implements OnInit {
 
 location;
 
-constructor(private _router: Router, private locationService: LocationService) {
+constructor(private _router: Router) {
   this.location = _router.url;
 }
 

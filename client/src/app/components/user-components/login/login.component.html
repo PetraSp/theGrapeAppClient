@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div class="col-md-6 col-md-offset-3">
+    <h2>Login</h2>
+    <form name="form" (ngSubmit)="submitUserLogin()" #userLoginForm="ngForm">
+        <p>
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="username" ngModel>
+        </p>
+
+        <p>
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="password" ngModel>
+        </p>
+
+        <button type='submit' >Sign up</button>
+    </form>
+</div>
