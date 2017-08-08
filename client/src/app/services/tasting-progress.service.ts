@@ -52,11 +52,11 @@ export class TastingProgressService {
 
   goToBeginningRoute() {
       this.currentRouteId = 0;
-      return  this.routes[this.currentRouteId];
+      this.router.navigate(['/tasting/intro']);
   }
 
   goToEndRoute() {
       this.currentRouteId = this.routes.length;
-      return  this.routes[this.currentRouteId];
+      this.router.navigate(['/tasting/palate/quirky']);
   }
 }
