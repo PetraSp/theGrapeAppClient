@@ -44,8 +44,55 @@ export class DriedFruitComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    console.log('Dried Fruit data submitted.', this.driedFruitResponse);
-    let driedFruitData = {key: 'driedFruit', value: this.driedFruitResponse};
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.driedFruitResponse);
+    let driedFruitData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.driedFruitResponse }};
+
+    console.log('driedFruitData:', JSON.stringify(driedFruitData));
+    console.log('Mr Key:', Object.keys(driedFruitData).join(''));
     this.userNotes.storeTastingData(driedFruitData);
   }
-  }
+
+}
+
+
+// {
+//   "appearance": {
+//     "colorSchema": [["ruby","pale"]]
+//   },
+//   "nose": {
+//     "floral": ["rose","potpourri"],
+//     "redFruit": ["strawberry","red cherry"],
+//     "blackFruit": ["blackcurrant","black plum"],
+//     "driedFruit": ["dried figs","jamminess","baked, stewed fruits"],
+//     "herbs": [""],
+//     "quirky":["mushroom"]
+//   },
+//   "palate": {
+//     "floral": [""],
+//     "redFruit": ["strawberry","red plum","raspberry","red cherry","cranberry"],
+//     "blackFruit": ["blackcurrant"],
+//     "herbs": ["blackcurrant leaf","tomato leaf","black pepper"],
+//     "quirky": ["toffee"]
+//   }
+// }
+
+// {
+//   "appearance": {
+//     "colorSchema": ["purple","medium"]
+//   },
+//   "nose": {
+
+//   },
+//   "palate": {
+//     "quirky": ["chocolate","wet leaves"]
+//   }
+// }

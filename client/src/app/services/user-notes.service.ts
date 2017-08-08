@@ -33,9 +33,11 @@ export class UserNotesService {
     // loops through data Array
     this.arrayOfData.forEach((dataObject) => {
       // Find main key for matching subObject with group
-      const dataObjectKey = Object.keys(dataObject)[0];
+      const dataObjectKey = dataObject.group;
+      console.log('dataObjectKey', dataObjectKey);
       // create subObject {key: value} from main dataObject
-      const data = dataObject[dataObjectKey];
+      const data = dataObject.value
+      console.log('data', data);
 
       // Find to which group the subObject belongs using dataObjectKey matching
       if (dataObjectKey === 'appearance'){

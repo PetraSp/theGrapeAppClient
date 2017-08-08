@@ -45,15 +45,17 @@ export class HerbsComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    // THIS IS THE KEY TO ALL MY LIFE'S PROBLEMS.
-    this.location = this.location.slice(9)
-    console.log('this.location', this.location);
-    const x = this.location.match("/(?=[^/]*$)");
-    console.log('x', x.index);
-    this.location = this.location.slice(0, x.index);
-    console.log("LALALALALAL", this.location);
-    console.log('Color Schema data submitted.', this.herbsResponse);
-    let herbsData = { palate: { key: 'herbs', value: this.herbsResponse }};
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.herbsResponse);
+    let herbsData = { group: group, 
+                      value: { key: 'herbs', 
+                               value: this.herbsResponse }};
+
     console.log('herbsData:', JSON.stringify(herbsData));
     console.log('Mr Key:', Object.keys(herbsData).join(''));
     this.userNotes.storeTastingData(herbsData);

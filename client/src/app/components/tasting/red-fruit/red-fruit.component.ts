@@ -11,11 +11,14 @@ export class RedFruitComponent implements OnInit {
 
     //make an array for the user input from the toggle buttons
   redFruitResponse = [];
+  location;
 
   constructor(
     private userNotes: UserNotesService,
     private router: Router,
-  ) { }
+  ) {
+    this.location = router.url;
+  }
 
   ngOnInit() {
   }
@@ -44,9 +47,20 @@ export class RedFruitComponent implements OnInit {
   }
 
   addToUserNotesObject() {
-    console.log('redFruit data submitted.', this.redFruitResponse);
-    let redFruitData = {key: 'redFruit', value: this.redFruitResponse};
-    this.userNotes.storeTastingData(redFruitData);
-  }
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
 
+    console.log('User data submitted.', this.redFruitResponse);
+    let redFruitData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.redFruitResponse }};
+
+    console.log('redFruitData:', JSON.stringify(redFruitData));
+    console.log('Mr Key:', Object.keys(redFruitData).join(''));
+    this.userNotes.storeTastingData(redFruitData);
+  }  
 }

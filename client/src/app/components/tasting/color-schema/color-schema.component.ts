@@ -28,19 +28,37 @@ export class ColorSchemaComponent implements OnInit {
     if (this.colorResponse.length === 1) {
       this.colorResponse.shift();
     }
-    this.colorResponse.push(colorRangeArray)
+    this.colorResponse.push(colorRangeArray);
     console.log(JSON.stringify(this.colorResponse))
   }
 
-  addToUserNotesObject() {
-    console.log('Color Schema data submitted.', this.colorResponse);
+  // addToUserNotesObject() {
+  //   console.log('Color Schema data submitted.', this.colorResponse);
     
-    let colorSchemaData = {
-      appearance: {
-        key: 'color', 
-        color: this.colorResponse
-      }
-    };
+  //   let colorSchemaData = {
+  //     appearance: {
+  //       key: 'color', 
+  //       color: this.colorResponse
+  //     }
+  //   };
+
+  //   console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
+  //   console.log('Mr Key:', Object.keys(colorSchemaData).join(''));
+  //   this.userNotes.storeTastingData(colorSchemaData);
+  // }
+
+    addToUserNotesObject() {
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.colorResponse);
+    let colorSchemaData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.colorResponse[0] }}; // Change if things BREAK!
 
     console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
     console.log('Mr Key:', Object.keys(colorSchemaData).join(''));

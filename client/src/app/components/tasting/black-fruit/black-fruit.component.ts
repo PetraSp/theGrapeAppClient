@@ -42,9 +42,21 @@ export class BlackFruitComponent implements OnInit {
     console.log('this.blackFruitResponse', this.blackFruitResponse);
   }
 
-  addToUserNotesObject() {
-    console.log('Black Fruit data submitted.', this.blackFruitResponse);
-    let blackFruitData = {key: 'blackFruit', value: this.blackFruitResponse};
+    addToUserNotesObject() {
+    // Slice and dice URL to get the group type from route
+    const sliceLocation = this.location.slice(9);
+    const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
+    const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
+    console.log("group:", group);
+
+    console.log('User data submitted.', this.blackFruitResponse);
+    let blackFruitData = { group: group, 
+                      value: { key: keyValue[0], 
+                               value: this.blackFruitResponse }};
+
+    console.log('blackFruitData:', JSON.stringify(blackFruitData));
+    console.log('Mr Key:', Object.keys(blackFruitData).join(''));
     this.userNotes.storeTastingData(blackFruitData);
   }
 }
