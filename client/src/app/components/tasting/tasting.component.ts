@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./tasting.component.css']
 })
 export class TastingComponent implements OnInit {
+
 location = '';
 
 constructor(private _router: Router) {

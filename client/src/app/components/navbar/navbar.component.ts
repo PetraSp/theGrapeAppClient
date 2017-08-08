@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  location;
-  constructor(private _route: Router) {
-    this.location = _route;
+  location = '';
+
+  constructor(private _router: Router) {
+    this.location = _router.url;
   }
 
   ngOnInit() {
