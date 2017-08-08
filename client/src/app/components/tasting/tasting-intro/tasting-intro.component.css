@@ -1,0 +1,82 @@
+.stagsWinery {
+  margin: 20px auto;
+  position: relative;
+	top: 25px;
+}
+
+.stagsWinery .bg {
+  width: 100%;
+}
+
+.stagsLogo {
+  position: absolute;
+	bottom: 0;
+  transform: translateY(50%);
+	right: 1em;
+}
+
+.wineName {
+  margin-top: 60px;
+  margin-bottom: 60px
+}
+
+
+.section--instructions {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.section--instructions .item {
+  width: 35%;
+}
+
+.section--instructions .item.x2 {
+  width: 65%;
+}
+
+.section--instructions .item .text {
+  padding: 0 10px;
+}
+
+.section--instructions .item img {
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.wineName,
+.section--instructions {
+  padding: 0 4%;
+}
+
+.line {
+  display: block;
+  margin: auto;
+  border: 2px solid rgba(0,0,0, .07);
+  margin-bottom: 5em;
+  width: 92%;
+}
+
+.main-footer {
+  border-top: 1px solid black;
+  width: 100vw;
+}
+
+.main-footer .text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #593E68;
+  font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+  .wineName,
+  .section--instructions {
+    padding: 0 8%;
+  }
+
+  .line {
+    width: 84%;
+  }
+}
