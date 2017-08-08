@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="video">
-    <video controls>
+    <video controls onclick="this.paused ? this.play() : this.pause();">
       <source src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/videos/WineTastingBasics.mov">
       </video>
     </div>
