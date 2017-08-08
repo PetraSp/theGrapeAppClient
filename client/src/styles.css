@@ -1,11 +1,10 @@
-html, body {
-	font-family: "¿ San Francisco NS ?", sans-serif;
+
+body {
 	font-size: 16px;
+  padding: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-family: 'San Francisco-Regular', sans-serif;
   font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-	letter-spacing: 0.5px;
-	margin: 0;
-	height: 100%;
-	padding: 0px;
-	width: 100%;
+  margin-bottom: 55px;
 }
