@@ -1,0 +1,34 @@
+.container {
+}
+
+.video video{
+  width: 100%;
+
+}
+.quote {
+  text-align: center;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote p:first-child {
+  margin-bottom: 4px;
+}
+.quote p:last-child {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .wineName,
+  .section--instructions {
+    padding: 0 8%;
+  }
+  .video video {
+    height: 400px;
+  }
+  .line {
+    width: 84%;
+  }
+}
