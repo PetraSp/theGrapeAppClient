@@ -1,8 +1,15 @@
 
 <div *ngIf = "location == '/tasting/appearance/instructions' ">
-  <p>Take a look at the wine in your glass, against white or clear background</p>
-  <img src="#" alt="/tasting/appearance/instructions instructions image">
-  <p class="">Now choose the wine's colour and depth or intensity</p>
+  <section class="section--instructions">
+    <div class="appearance">
+      <p class="text">Take a look at the wine in your glass, against white or clear background</p>
+    <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/WineTastingVidPics/Looking.jpeg" alt="appearance">
+    <p class="text">Now choose the wine's colour and depth or intensity</p>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <h3 class="text">Make your choice</h3>
+  </footer>
 </div>
 
 <div *ngIf = "location == '/tasting/nose/instructions' ">
