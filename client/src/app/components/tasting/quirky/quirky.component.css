@@ -1,3 +1,17 @@
+.title {
+  color: #593E68;
+  margin: 20px auto;
+  position: relative;
+  top: 25px;
+  font-weight: normal;
+  font-size: 25px;
+  width: 100%;
+}
+
+.title h3 {
+  padding-top: 1em;
+}
+
 .quirkyComponentOptions {
   display: flex;
   flex-wrap: wrap;
@@ -20,17 +34,44 @@
   display: block;
   margin: auto;
   width: 100%;
+  margin-bottom: 1em;
 }
 
+.select {
+  margin-bottom: 1em;
+}
+
+.quirkyComponentOptions .button.full-width {
+width: 100%;
+}
+
+.quirkyComponentOptions .button {
+  border-color: #E7A524;
+}
 
 .quirkyComponentOptions .button:hover {
-  border-color: #E7A524;
   background-color: #E7A524;
   color: #fff;
 }
 
-.quirky-container{
+
+.line {
+  display: block;
+  margin: auto;
+  border-top: 1px solid rgba(151,151,151, 1);
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+.quirky-container {
   padding: 0 4%;
+}
+
+
+@media (min-width: 768px) {
+  .quirky-container {
+    padding: 0 8%;
+  }
 }
 
 .main-footer {
@@ -65,4 +106,5 @@ a {
 .btn-tasting:hover {
   background-color: #593e68;
   color: #fff;
+
 }
