@@ -20,10 +20,6 @@
   /*margin-bottom: 80px;*/
 }
 
-.section--instructions .appearance .text {
-  padding: 20px 10px;
-  /*margin-bottom: 80px;*/
-}
 
 .main-footer {
   border-top: 1px solid black;
@@ -35,4 +31,19 @@
   text-align: center;
   color: #593E68;
   font-weight: lighter;
+}
+
+.nose-instructions img {
+  width: 49%;
+  padding: .5em 1em;
+  margin-bottom: 1em;
+  transform: rotate(90deg);
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+
+.nose-instructions .text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 15px 10px;
 }
