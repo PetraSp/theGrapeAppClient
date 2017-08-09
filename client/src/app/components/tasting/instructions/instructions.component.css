@@ -1,0 +1,38 @@
+.section--instructions {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+
+.section--instructions .appearance img {
+  border: 1px solid black;
+  width: 100%;
+  margin: 4em;
+  transform: rotate(90deg);
+  margin-top: 170px;
+  margin-bottom: 170px;
+}
+
+.section--instructions .appearance .text {
+  padding: 15px 10px;
+  /*margin-bottom: 80px;*/
+}
+
+.section--instructions .appearance .text {
+  padding: 20px 10px;
+  /*margin-bottom: 80px;*/
+}
+
+.main-footer {
+  border-top: 1px solid black;
+  width: 100vw;
+}
+
+.main-footer .text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #593E68;
+  font-weight: lighter;
+}
