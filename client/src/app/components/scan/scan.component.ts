@@ -13,4 +13,7 @@ export class ScanComponent implements OnInit {
   ngOnInit() {
   }
 
+  findWine(form) {
+    console.log("form", form);
+  }
 }
