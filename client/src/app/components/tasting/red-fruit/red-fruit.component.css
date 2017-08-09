@@ -1,3 +1,17 @@
+.title {
+  color: #593E68;
+  margin: 20px auto;
+  position: relative;
+  top: 25px;
+  font-weight: normal;
+  font-size: 25px;
+  width: 100%;
+}
+
+.title h3 {
+  padding-top: 1em;
+}
+
 .redFruitComponentOptions {
   display: flex;
   flex-wrap: wrap;
@@ -20,17 +34,44 @@
   display: block;
   margin: auto;
   width: 100%;
+  margin-bottom: 1em;
 }
 
+.select {
+  margin-bottom: 1em;
+}
+
+.redFruitComponentOptions .button.full-width {
+width: 100%;
+}
+
+.redFruitComponentOptions .button {
+  border-color: #E85956;
+}
 
 .redFruitComponentOptions .button:hover {
-  border-color: #E85956;
-  background-color: #89ABFB;
+  background-color: #E85956;
   color: #fff;
 }
 
-.redFruit-container{
+
+.line {
+  display: block;
+  margin: auto;
+  border-top: 1px solid rgba(151,151,151, 1);
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+.redFruit-container {
   padding: 0 4%;
+}
+
+
+@media (min-width: 768px) {
+  .redFruit-container {
+    padding: 0 8%;
+  }
 }
 
 .main-footer {

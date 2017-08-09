@@ -1,11 +1,24 @@
-<p>
-  notes-comparison works!
-</p>
+<img class="logo" src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/smallLogo.svg" alt="small logo">
 
+<hr class="line">
 
-<p>Expert Notes:</p>
-<ul *ngFor='let wine of wineList'>
-  <li>{{wine.wineName}}</li>
+<!-- *ngFor='let wine of wineList' -->
+<ul class="flex-container header">
+  <li class="flex-item"><h3>Your choices</h3></li>
+  <li class="flex-item"><h3>The expert’s</h3></li>
+</ul>
+<ul class="flex-container" >
+  <h4 class="flex-item heading ">Color and intensity</h4>
+  <li class="flex-item">ITEM3{{wine.wineName}}</li>
+  <li class="flex-item">ITEM4{{wine.wineName}}</li>
+  <h4 class="flex-item heading ">Floral Aromas</h4>
+  <li class="flex-item">ITEM5{{wine.wineName}}</li>
+  <li class="flex-item">ITEM6{{wine.wineName}}</li>
+  <h4 class="flex-item heading ">Fresh Fruits</h4>
+  <li class="flex-item">ITEM7{{wine.wineName}}</li>
+  <li class="flex-item">ITEM8{{wine.wineName}}</li>
 </ul>
 
-  <button [routerLink]="['/notes']">Back to your tasting notes</button>
+<footer class="main-footer">
+  <a class='btn-tasting' [routerLink]="['/notes']">Back to tasting notes</a>
+</footer>
