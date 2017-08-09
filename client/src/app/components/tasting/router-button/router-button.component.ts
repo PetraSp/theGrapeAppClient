@@ -23,6 +23,7 @@ export class RouterButtonComponent implements OnInit {
 
   getNextRoute() {
     this.nextRoute = this.tastingProgress.goToNextRoute();
+    
   }
   getPreviousRoute() {
     this.previousRoute = this.tastingProgress.goToPreviousRoute();

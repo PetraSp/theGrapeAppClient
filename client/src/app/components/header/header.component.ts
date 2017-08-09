@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TastingProgressService } from '../../services/tasting-progress.service';
 import { Router } from '@angular/router';
+import { SignupService } from '../../services/signup.service';
+import { LinkService } from '../../services/link.service';
 
 @Component({
   selector: 'app-header',
@@ -13,15 +15,22 @@ export class HeaderComponent implements OnInit {
   previousRoute;
   title = 'The Grape App';
 
-  constructor(private tastingProgress: TastingProgressService) {
+  constructor(
+    private tastingProgress: TastingProgressService, 
+    private session: SignupService,
+    private link: LinkService) {
   }
 
   ngOnInit() {
-    console.log(this.location);
+    this.link.event.subscribe((data) => {
+      console.log("Our data!!!!", data);
+    });
   }
 
   getPreviousRoute() {
     this.previousRoute = this.tastingProgress.goToPreviousRoute();
   }
+
+
 
 }
