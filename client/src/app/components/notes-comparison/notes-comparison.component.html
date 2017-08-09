@@ -2,4 +2,10 @@
   notes-comparison works!
 </p>
 
+
+<p>Expert Notes:</p>
+<ul *ngFor='let wine of wineList'>
+  <li>{{wine.wineName}}</li>
+</ul>
+
   <button [routerLink]="['/notes']">Back to your tasting notes</button>
