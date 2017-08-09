@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-herbs',
@@ -13,12 +15,17 @@ export class HerbsComponent implements OnInit {
   herbsResponse = [];
   location = '';
   pattern = "/^(.*[\\\/])/";
+  nextRoute;
 
-  constructor(private userNotes: UserNotesService, private router: Router) {
+  constructor(private userNotes: UserNotesService, private router: Router, private tastingProgress: TastingProgressService) {
     this.location = router.url;
   }
 
   ngOnInit() {
+  }
+
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
   }
 
   // define toggle function for button
@@ -52,8 +59,8 @@ export class HerbsComponent implements OnInit {
     console.log("group:", group);
 
     console.log('User data submitted.', this.herbsResponse);
-    let herbsData = { group: group, 
-                      value: { key: 'herbs', 
+    let herbsData = { group: group,
+                      value: { key: 'herbs',
                                value: this.herbsResponse }};
 
     console.log('herbsData:', JSON.stringify(herbsData));
