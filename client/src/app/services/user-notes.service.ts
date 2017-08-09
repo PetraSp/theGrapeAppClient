@@ -11,6 +11,7 @@ export class UserNotesService {
   BASE_URL: string = 'http://localhost:3000';
   notes;  // Notes object
   arrayOfData = []; // Array to store ongoing data during the tasting test
+  userReferenceID;
 
   constructor(private http: Http, ) { }
 
@@ -18,6 +19,10 @@ export class UserNotesService {
   storeTastingData(data) {
     this.arrayOfData.push(data);
     console.log(JSON.stringify(this.arrayOfData));
+  }
+
+  getUserID(userID) {
+    this.userReferenceID = userID;
   }
 
   // Function which activates on SUBMIT TEST at the end.
@@ -60,13 +65,22 @@ export class UserNotesService {
       }
     });
     console.log(JSON.stringify(notes));
+    this.notes = notes;
+    this.addUserNotes();
   }
 
   // Access API. Stores user notes in database
-  addUserNotes(notes) {
-  console.log('this.notes', this.notes)
-  return this.http.post(`${this.BASE_URL}/api/user-entries`, this.notes)
-    .map((res) => res.json())
+  addUserNotes() {
+  console.log('We are in addUserNotes', this.notes)
+  return this.http.post(`${this.BASE_URL}/api/userNotes`, this.notes)
+    // .map((res) => res.json())
+    .subscribe(
+          res => {
+            console.log('Registration successful');
+          },
+          error => {
+            console.log(error);
+          });
   }
 }
 

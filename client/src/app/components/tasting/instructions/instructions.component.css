@@ -25,6 +25,7 @@
 .main-footer {
   border-top: 1px solid black;
   width: 100vw;
+  color: #593E68;
 }
 
 .main-footer .text {
@@ -32,6 +33,28 @@
   text-align: center;
   color: #5A555E;
   font-weight: lighter;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-tasting {
+  padding: 1em 2em;
+  letter-spacing: 0.51px;
+  text-transform: uppercase;
+  border: 1px solid #593E68;
+  transition: all 300ms ease;
+  width: 300px;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.btn-tasting:hover {
+  background-color: #593e68;
+  color: #fff;
 }
 
 .nose-instructions img {
@@ -46,6 +69,21 @@
 }
 
 .nose-instructions .text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+}
+
+.palate-instructions img {
+  width: 49%;
+  padding: .5em 1em;
+  margin-bottom: 1em;
+  transform: rotate(90deg);
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+
+.palate-instructions .text {
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 15px 10px;

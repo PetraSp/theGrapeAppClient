@@ -4,3 +4,29 @@
 <div *ngIf="this.session.isAuthenticated">
 		Welcome, {{this.session.user.username}}!
 </div>
+
+ <form #scanForm='ngForm' (ngSubmit)='findWine(scanForm.value)'>
+  <p>
+    <label for="name">Name of the wine</label>
+    <input type="text" name="name" placeholder="Name" ngModel>
+  </p>
+
+  <p>
+    <label for="vineyard">Vineyard</label>
+    <input type="text" name="vineyard" placeholder="Vineyard" ngModel>
+  </p>
+
+  <p>
+    <label for="vintage">Vintage</label>
+    <input type="text" name="vintage" placeholder="Vintage (i.e: 2011)" ngModel>
+  </p>
+
+  <button type='submit' >Find Wine!</button>
+</form> 
+
+
+<!-- name: String,
+  vineyard: String,
+  vintage: Number,
+  label: String, //[{type: Schema.Types.ObjectId, ref: 'Picture'}],
+  expertNotes: String,//[{ type: Schema.Types.ObjectID, ref: 'Notes'}], -->

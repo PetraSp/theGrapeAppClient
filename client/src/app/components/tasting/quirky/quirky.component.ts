@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { SessionService } from '../../../services/session.service';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-quirky',
@@ -12,12 +15,22 @@ export class QuirkyComponent implements OnInit {
   //make an array for the user input from the toggle buttons
   quirkyResponse = [];
   location = '';
+  nextRoute;
 
-  constructor(private userNotes: UserNotesService, private router: Router) {
+
+  constructor(private userNotes: UserNotesService,
+    private router: Router,
+    private session: SessionService,
+    private tastingProgress: TastingProgressService,
+  ) {
     this.location = router.url;
   }
 
   ngOnInit() {
+  }
+
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
   }
 
   // define toggle function for button
@@ -54,8 +67,8 @@ export class QuirkyComponent implements OnInit {
     console.log("group:", group);
 
     console.log('User data submitted.', this.quirkyResponse);
-    let quirkyData = { group: group, 
-                      value: { key: keyValue[0], 
+    let quirkyData = { group: group,
+                      value: { key: keyValue[0],
                                value: this.quirkyResponse }};
 
     console.log('quirkyData:', JSON.stringify(quirkyData));
@@ -65,7 +78,9 @@ export class QuirkyComponent implements OnInit {
 
   callAssemble() {
     console.log('callAssemble called.');
+    let userID = localStorage.getItem("user");
     this.userNotes.assembleTastingNotes();
+    this.userNotes.getUserID(userID);
   }
 
 

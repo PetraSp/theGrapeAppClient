@@ -68,6 +68,40 @@ width: 100%;
   padding: 0 4%;
 }
 
+.main-footer {
+  width: 100vw;
+  color: #593E68;
+}
+
+.main-footer .text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #593E68;
+  font-weight: lighter;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-tasting {
+  padding: 1em 2em;
+  letter-spacing: 0.51px;
+  text-transform: uppercase;
+  border: 1px solid #593E68;
+  transition: all 300ms ease;
+  width: 300px;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.btn-tasting:hover {
+  background-color: #593e68;
+  color: #fff;
+}
+
 @media (min-width: 768px) {
   .floral-container {
     padding: 0 8%;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
 
 
 @Component({
@@ -12,14 +13,18 @@ export class DriedFruitComponent implements OnInit {
 
   driedFruitResponse = [];
   location = '';
+  nextRoute;
 
-  constructor(private userNotes: UserNotesService, private router: Router) {
+  constructor(private userNotes: UserNotesService, private router: Router, private tastingProgress: TastingProgressService) {
     this.location = router.url;
   }
 
   ngOnInit() {
   }
 
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
+  }
   // define toggle function for button
   userInputToggle(driedFruit) {
     // check if driedFruit is in array
@@ -53,8 +58,8 @@ export class DriedFruitComponent implements OnInit {
     console.log("group:", group);
 
     console.log('User data submitted.', this.driedFruitResponse);
-    let driedFruitData = { group: group, 
-                      value: { key: keyValue[0], 
+    let driedFruitData = { group: group,
+                      value: { key: keyValue[0],
                                value: this.driedFruitResponse }};
 
     console.log('driedFruitData:', JSON.stringify(driedFruitData));

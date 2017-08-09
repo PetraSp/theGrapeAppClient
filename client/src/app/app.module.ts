@@ -16,7 +16,7 @@ import { ScanComponent } from './components/scan/scan.component';
 import { ProfileComponent } from './components/user-components/profile/profile.component';
 import { TastingComponent } from './components/tasting/tasting.component';
 import { ApiService } from './services/api.service';
-import { SessionService } from './services/session.service';
+import { UserApiService } from './services/user-api.service';
 import { TastingProgressService } from './services/tasting-progress.service';
 import { RouterButtonComponent } from './components/tasting/router-button/router-button.component';
 import { InstructionsComponent } from './components/tasting/instructions/instructions.component';
@@ -33,8 +33,7 @@ import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-frui
 import { HerbsComponent } from './components/tasting/herbs/herbs.component';
 import { NotesComparisonComponent } from './components/notes-comparison/notes-comparison.component';
 import { UserNotesService } from './services/user-notes.service';
-import { AuthenticationService } from './services/authentication.service';
-import { SignupService } from './services/signup.service';
+import { SessionService } from './services/session.service';
 import { LinkService } from './services/link.service';
 
 
@@ -71,10 +70,9 @@ import { LinkService } from './services/link.service';
   providers: [
     ApiService,
     TastingProgressService,
-    SessionService,
+    UserApiService,
     UserNotesService,
-    AuthenticationService,
-    SignupService,
+    SessionService,
     LinkService,
   ],
   bootstrap: [AppComponent]
