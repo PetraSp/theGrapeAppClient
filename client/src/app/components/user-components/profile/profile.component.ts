@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserApiService } from '../../../services/user-api.service';
+import { SessionService } from '../../../services/session.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  user = {};
+
+  constructor(
+    private userApi: UserApiService,
+    private session: SessionService,
+  ) { }
 
   ngOnInit() {
+    let userID = this.session.user;
+    console.log("userID", userID);
+    this.userApi.getOneUser(userID)
+        .subscribe((userObject) => {
+          this.user = userObject;
+        });
+    console.log(this.user);
   }
 
 }
