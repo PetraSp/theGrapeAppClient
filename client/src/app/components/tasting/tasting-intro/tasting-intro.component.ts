@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-tasting-intro',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TastingIntroComponent implements OnInit {
 
-  constructor() { }
+  nextRoute;
+
+  constructor(private tastingProgress: TastingProgressService) { }
 
   ngOnInit() {
   }
 
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
+  }
 }
