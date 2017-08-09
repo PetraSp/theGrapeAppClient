@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { SessionService } from '../../../services/session.service';
 
 @Component({
   selector: 'app-quirky',
@@ -13,7 +14,10 @@ export class QuirkyComponent implements OnInit {
   quirkyResponse = [];
   location = '';
 
-  constructor(private userNotes: UserNotesService, private router: Router) {
+  constructor(private userNotes: UserNotesService, 
+    private router: Router,
+    private session: SessionService,
+  ) {
     this.location = router.url;
   }
 
@@ -65,7 +69,9 @@ export class QuirkyComponent implements OnInit {
 
   callAssemble() {
     console.log('callAssemble called.');
+    let userID = localStorage.getItem("user");
     this.userNotes.assembleTastingNotes();
+    this.userNotes.getUserID(userID);
   }
 
 

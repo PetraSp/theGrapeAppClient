@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SessionService } from '../../../services/session.service';
+import { UserApiService } from '../../../services/user-api.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
   user: any = {};
 
   constructor(
-    private session: SessionService,
+    private userApi: UserApiService,
     private router: Router,
   ) { }
 
@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit(user) {
     console.log('Form submitted.', user);
-    this.session.addUser(user)
+    this.userApi.addUser(user)
         .subscribe(
           data => {
             console.log('Registration successful');

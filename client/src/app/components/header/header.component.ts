@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TastingProgressService } from '../../services/tasting-progress.service';
 import { Router } from '@angular/router';
-import { SignupService } from '../../services/signup.service';
+import { SessionService } from '../../services/session.service';
 import { LinkService } from '../../services/link.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private tastingProgress: TastingProgressService, 
-    private session: SignupService,
+    private session: SessionService,
     private link: LinkService) {
   }
 
