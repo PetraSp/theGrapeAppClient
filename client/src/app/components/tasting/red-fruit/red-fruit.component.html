@@ -1,8 +1,24 @@
-<div class="title redFruit-container">
-  <h3>Fresh Red Fruit</h3>
-  <hr class="line">
-  <img class='redFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshRedFruit%402x.png" alt="Red fruit">
-  <p class="select">Select the aromas you can <br> detect:</p>
+<!-- ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### -->
+<div *ngIf = "location == '/tasting/nose/redFruit' ">
+  <div class="title redFruit-container">
+    <h3>Fresh Red Fruit Aromas</h3>
+    <hr class="line">
+    <img class='redFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshRedFruit%402x.png" alt="Red fruit">
+    <p class="select">Select the aromas you detect:</p>
+</div>
+</div>
+
+
+<!-- ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### NOSE ######### -->
+<div *ngIf = "location == '/tasting/palate/redFruit' ">
+  <div class="title redFruit-container">
+    <h3>Fresh Red Fruit Palate</h3>
+    <hr class="line">
+    <img class='redFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshRedFruit%402x.png" alt="Red fruit">
+    <p class="select">Select the flavours you detect:</p>
+</div>
+</div>
+
 
   <section class="redFruitComponentOptions">
     <button class="button" (click)="userInputToggle('strawberry')">Strawberry</button>
@@ -12,7 +28,7 @@
     <button class="button" (click)="userInputToggle('cranberry')">Cranberry</button>
     <button class="button" (click)="userInputToggle('none')">None</button>
   </section>
-</div>
+
 
 <footer class="main-footer">
   <a class='btn-tasting'(click)='addToUserNotesObject(); getNextRoute()'>Submit</a>
