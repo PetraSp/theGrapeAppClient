@@ -33,7 +33,9 @@ import { DriedFruitComponent } from './components/tasting/dried-fruit/dried-frui
 import { HerbsComponent } from './components/tasting/herbs/herbs.component';
 import { NotesComparisonComponent } from './components/notes-comparison/notes-comparison.component';
 import { UserNotesService } from './services/user-notes.service';
-import { LocationService } from './services/location.service';
+import { AuthenticationService } from './services/authentication.service';
+import { SignupService } from './services/signup.service';
+import { LinkService } from './services/link.service';
 
 
 @NgModule({
@@ -71,7 +73,9 @@ import { LocationService } from './services/location.service';
     TastingProgressService,
     SessionService,
     UserNotesService,
-    LocationService,
+    AuthenticationService,
+    SignupService,
+    LinkService,
   ],
   bootstrap: [AppComponent]
 })

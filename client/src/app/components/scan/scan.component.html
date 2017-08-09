@@ -1,1 +1,6 @@
 <p>Scan works!</p>
+
+
+<div *ngIf="this.session.isAuthenticated">
+		Welcome, {{this.session.user.username}}!
+</div>
