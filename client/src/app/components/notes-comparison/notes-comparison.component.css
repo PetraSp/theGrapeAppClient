@@ -1,0 +1,76 @@
+.logo {
+  margin: 0 auto;
+  display: block;
+}
+
+.line {
+  display: block;
+  margin: auto;
+  border: 2px solid rgba(0,0,0, .07);
+  margin-bottom: 5em;
+  width: 92%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4%;
+}
+
+.flex-item {
+  width: 50%;
+  border-bottom: 1px solid #968E92;
+  list-style-type: none;
+  padding: 1em;
+  text-align: center;
+}
+
+
+.flex-item:nth-child(2),
+.flex-item:nth-child(5),
+.flex-item:nth-child(8) {
+  border-right: 1px solid #968E92;
+}
+
+
+.flex-container.header h3 {
+  color: #593E68;
+  letter-spacing: -1.5px;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.flex-container.header .flex-item {
+  border: 0;
+}
+
+.flex-container .flex-item.heading {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 2.5em;
+  padding-bottom: 2px;
+  border: 0;
+  font-size: 30px;
+  color: #593E68;
+  font-weight: 300;
+}
+
+
+
+
+/*{
+  user: {
+    color: String,
+    density: String,
+    aromas: [String],
+    fruits: [String]
+  },
+  experts: {
+    color: String,
+    density: String,
+    aromas: [String],
+    fruits: [String]
+  }
+}*/
