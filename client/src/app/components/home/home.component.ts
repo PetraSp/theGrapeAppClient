@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from '../../services/session.service';
+import { UserApiService } from '../../services/user-api.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
 
   userList;
 
-  constructor(private session: SessionService,) { }
+  constructor(private userApi: UserApiService,) { }
 
   ngOnInit() {
-    this.session.getUsers()
+    this.userApi.getUsers()
       .subscribe((userList) => {
         this.userList = userList;
       });
