@@ -36,7 +36,7 @@ export class TastingProgressService {
     else {
       this.currentRouteId++;
       this.test = this.routes[this.currentRouteId];
-      this.router.navigate([`tasting/${this.test}`])
+      this.router.navigate([`tasting/${this.test}`]);
     }
   }
 
