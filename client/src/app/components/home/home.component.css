@@ -10,6 +10,12 @@
   font-size: 0.8em;
 }
 
+.quote,
+.instructions {
+  letter-spacing: 0.51px;
+  color: #5A555E;
+}
+
 .quote p {
   margin: 0;
 }
@@ -27,7 +33,11 @@
 
 .instructions p:first-child {
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.instructions p:nth-child(2){
+    margin-bottom: 0;
 }
 
 .instructions p {
@@ -37,6 +47,23 @@
 a {
   display: flex;
   justify-content: center;
+}
+
+.btn-tasting {
+  padding: 1em 2em;
+  letter-spacing: 0.51px;
+  text-transform: uppercase;
+  border: 1px solid #593e68;
+  transition: all 300ms ease;
+  width: 200px;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.btn-tasting:hover {
+  background-color: #593e68;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
