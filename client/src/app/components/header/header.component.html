@@ -4,5 +4,11 @@
 		<img id='previous-icon' (click)='getPreviousRoute()' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/chevronLeft.svg" >
 	</div>
 		<p id="title">{{title}}</p>
-		<p id="empty"></p>
+
+	<div *ngIf="this.session.isAuthenticated; else loggedIn">
+		Welcome, {{this.session.user.username}}!
+	</div>
+	<ng-template #loggedIn>
+    <p id="empty"></p>
+  </ng-template>
 </div>

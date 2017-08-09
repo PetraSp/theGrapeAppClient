@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupService } from '../../services/signup.service';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scan.component.css']
 })
 export class ScanComponent implements OnInit {
-  constructor() {}
+  constructor(private session: SignupService) {}
 
   ngOnInit() {
   }

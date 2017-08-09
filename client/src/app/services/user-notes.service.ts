@@ -25,7 +25,9 @@ export class UserNotesService {
   assembleTastingNotes() {
 
     let notes = {     // dataObject
-      appearance: {}, // Group
+      appearance: {
+        
+      }, // Group
       nose: {},       // Group
       palate: {}      // Group
     };
@@ -82,4 +84,11 @@ export class UserNotesService {
 //     "herbs":[""],
 //     "quirky":["mushroom","chocolate"]
 //   },
-//   "palate":{"floral":["violet","potpourri"],"redFruit":["red plum"],"blackFruit":["black plum"],"herbs":[],"quirky":["toffee","mushroom"]}}
+//   "palate": {
+//     "floral": ["violet","potpourri"],
+//     "redFruit":["red plum"],
+//     "blackFruit":["black plum"],
+//     "herbs":[],
+//     "quirky": ["toffee","mushroom"]
+//     }
+// }

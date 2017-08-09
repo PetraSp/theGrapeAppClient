@@ -33,9 +33,10 @@ export class SessionService {
       avatar: 'String'
     }
     console.log('this.userObject', this.userObject)
-    // let headers = new Headers({ 'Authorization': 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MmU3ZGJlNzg0MGY1Y2E4ZjhjZmFmZiIsInVzZXIiOiJ0aG9yIiwiaWF0IjoxNTAxMzIxNzkxfQ.T4N3dVLQ7p7E7STy7Pm_BsMtFE494JaqhMf-BfWiz6k' });
+    // let headers = new Headers({ 'Authorization': `JWT ${token}` });
     // let options = new RequestOptions({ headers: headers });
-    return this.http.post(`${this.BASE_URL}/api/user-entries`, this.userObject)
+
+    return this.http.post(`${this.BASE_URL}/api/signup`, this.userObject)
       .map((res) => res.json())
   }
 
