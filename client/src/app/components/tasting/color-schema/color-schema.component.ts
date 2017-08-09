@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-color-schema',
@@ -13,18 +15,23 @@ export class ColorSchemaComponent implements OnInit {
   //make an array for the user input from the toggle buttons
   colorResponse = [];
   location = '';
+  nextRoute;
 
-  constructor(private userNotes: UserNotesService, private router: Router) {
+  constructor(private userNotes: UserNotesService, private router: Router, private tastingProgress: TastingProgressService) {
     this.location = router.url;
   }
 
   ngOnInit() {
   }
 
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
+  }
+
   // define toggle function for button
   userInputToggle(colorName, colorRange) {
     const colorRangeArray = [colorName, colorRange];
-    
+
     if (this.colorResponse.length === 1) {
       this.colorResponse.shift();
     }
@@ -34,10 +41,10 @@ export class ColorSchemaComponent implements OnInit {
 
   // addToUserNotesObject() {
   //   console.log('Color Schema data submitted.', this.colorResponse);
-    
+
   //   let colorSchemaData = {
   //     appearance: {
-  //       key: 'color', 
+  //       key: 'color',
   //       color: this.colorResponse
   //     }
   //   };
@@ -56,8 +63,8 @@ export class ColorSchemaComponent implements OnInit {
     console.log("group:", group);
 
     console.log('User data submitted.', this.colorResponse);
-    let colorSchemaData = { group: group, 
-                      value: { key: keyValue[0], 
+    let colorSchemaData = { group: group,
+                      value: { key: keyValue[0],
                                value: this.colorResponse[0] }}; // Change if things BREAK!
 
     console.log('colorSchemaData:', JSON.stringify(colorSchemaData));
