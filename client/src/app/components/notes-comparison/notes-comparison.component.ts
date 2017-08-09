@@ -10,6 +10,10 @@ export class NotesComparisonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.session.getWines()
+    //   .subscribe((wineList) => {
+    //     this.wineList = wineList;
+    //   });
   }
 
 }
