@@ -1,7 +1,7 @@
-<p>
-  profile works!
-</p>
 
-<a href="#">The Grape App || </a>
+<!--
+<p class="">Username: {{user}}</p> -->
 
-<p class="">Username: {{user}}</p>
+<div *ngIf="this.session.isAuthenticated">
+  <p> Welcome, {{this.session.user.username}}! </p>
+</div>

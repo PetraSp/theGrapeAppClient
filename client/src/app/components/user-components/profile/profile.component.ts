@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApiService } from '../../../services/user-api.service';
 import { SessionService } from '../../../services/session.service';
+import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
@@ -14,6 +15,7 @@ export class ProfileComponent implements OnInit {
   constructor(
     private userApi: UserApiService,
     private session: SessionService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,12 @@ export class ProfileComponent implements OnInit {
           this.user = userObject;
         });
     console.log(this.user);
+
+    if (this.session.isAuthenticated) {
+      return;
+    } else {
+      this.router.navigate(['./login']);
+    }
   }
 
 }
