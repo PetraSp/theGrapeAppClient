@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 export class ApiService {
 
   BASE_URL: string = 'http://localhost:3000';
+  userQuery = '';
 
   constructor(
     private http: Http,
@@ -19,6 +20,18 @@ export class ApiService {
   getOneWine(id) {
     return this.http.get(`${this.BASE_URL}/api/wine-entries/${id}`)
                     .map((res) => res.json());
+  }
+
+
+  getWineBySearchQuery(userQuery) {
+    this.userQuery = userQuery;
+    return this.http.post(`${this.BASE_URL}/api/wine-search`, this.userQuery).subscribe(
+          res => {
+            console.log('Registration successful');
+          },
+          error => {
+            console.log(error);
+          });
   }
 
   getTastings() {
@@ -36,4 +49,7 @@ export class ApiService {
     return this.http.post(`${this.BASE_URL}/api/tasting-entries`, tasting)
       .map((res) => res.json())
   }
+
+
+
 }
