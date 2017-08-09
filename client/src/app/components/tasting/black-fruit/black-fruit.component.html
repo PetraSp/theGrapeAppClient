@@ -2,6 +2,7 @@
 <div *ngIf = "location == '/tasting/nose/blackFruit' ">
   <div class="title blackFruit-container">
     <h3>Fresh Black Fruit Aromas</h3>
+    <hr class="line">
     <img class='blackFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshBlackFruit%402x.png" alt="Black fruit">
     <p class="select">Select the aromas you detect:</p>
   </div>
@@ -11,19 +12,24 @@
 
  <!-- Palate -->
 <div *ngIf = "location == '/tasting/palate/blackFruit' ">
-  <h3>Fresh Black Fruit Tastes</h3>
-  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshBlackFruit%402x.png">
-  <p>Select the flavors you taste:</p>
+  <div class="title blackFruit-container">
+    <h3>Fresh Black Fruit Tastes</h3>
+    <hr class="line">
+    <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshBlackFruit%402x.png">
+    <p class="select">Select the flavors you taste:</p>
+  </div>
 </div>
 
-<section class="blackFruitComponentOptions">
-  <button class="button" (click)="userInputToggle('blackcurrant')">Blackcurrant</button>
-  <button class="button" (click)="userInputToggle('black plum')">Black plum</button>
-  <button class="button" (click)="userInputToggle('raspberry')">Raspberry</button>
-  <button class="button" (click)="userInputToggle('blackberry')">Blackberry</button>
-  <button class="button" (click)="userInputToggle('blackcherry')">Black cherry</button>
-  <button class="button" (click)="userInputToggle('blueberry')">Blueberry</button>
-  <button class="button" (click)="userInputToggle('none')">None</button>
-</section>
+<div class="title blackFruit-container">
+  <section class="blackFruitComponentOptions">
+    <button class="button" (click)="userInputToggle('blackcurrant')">Blackcurrant</button>
+    <button class="button" (click)="userInputToggle('black plum')">Black plum</button>
+    <button class="button" (click)="userInputToggle('raspberry')">Raspberry</button>
+    <button class="button" (click)="userInputToggle('blackberry')">Blackberry</button>
+    <button class="button" (click)="userInputToggle('blackcherry')">Black cherry</button>
+    <button class="button" (click)="userInputToggle('blueberry')">Blueberry</button>
+    <button class="button" (click)="userInputToggle('none')">None</button>
+  </section>
+</div>
 
 <button (click)="addToUserNotesObject()">Submit</button>

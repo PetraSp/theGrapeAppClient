@@ -6,13 +6,14 @@
 
 }
 
+.section--instructions .appearance {
+  width: 100%;
+}
+
 .section--instructions .appearance img {
   border: 1px solid black;
   width: 100%;
-  margin: 4em;
-  transform: rotate(90deg);
-  margin-top: 170px;
-  margin-bottom: 170px;
+  margin:auto;
 }
 
 .section--instructions .appearance .text {
@@ -29,17 +30,19 @@
 .main-footer .text {
   text-transform: uppercase;
   text-align: center;
-  color: #593E68;
+  color: #5A555E;
   font-weight: lighter;
 }
 
 .nose-instructions img {
   width: 49%;
-  padding: .5em 1em;
+  padding: .5em .5em .5em 1em;
   margin-bottom: 1em;
-  transform: rotate(90deg);
-  margin-top: 100px;
-  margin-bottom: 120px;
+  margin-top: 1em;
+}
+
+.nose-instructions img.last {
+  padding: .5em 1em .5em .5em;
 }
 
 .nose-instructions .text {

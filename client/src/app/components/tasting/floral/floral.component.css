@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.title h3 {
+  padding-top: 1em;
+}
+
 .floralComponentOptions {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +34,11 @@
   display: block;
   margin: auto;
   width: 100%;
+  margin-bottom: 1em;
+}
+
+.select {
+  margin-bottom: 1em;
 }
 
 .floralComponentOptions .button.full-width {
@@ -50,9 +59,9 @@ width: 100%;
 .line {
   display: block;
   margin: auto;
-  border: 2px solid rgba(0,0,0, .07);
-  margin-bottom: 5em;
-  width: 92%;
+  border-top: 1px solid rgba(151,151,151, 1);
+  margin-bottom: .5em;
+  width: 100%;
 }
 
 .floral-container {
@@ -62,9 +71,5 @@ width: 100%;
 @media (min-width: 768px) {
   .floral-container {
     padding: 0 8%;
-  }
-
-  .line {
-    width: 84%;
   }
 }
