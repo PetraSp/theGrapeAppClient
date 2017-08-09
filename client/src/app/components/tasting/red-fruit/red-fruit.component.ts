@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserNotesService } from '../../../services/user-notes.service';
+import { TastingProgressService } from '../../../services/tasting-progress.service';
+
 
 @Component({
   selector: 'app-red-fruit',
@@ -12,8 +14,10 @@ export class RedFruitComponent implements OnInit {
     //make an array for the user input from the toggle buttons
   redFruitResponse = [];
   location;
+  nextRoute;
 
   constructor(
+    private tastingProgress: TastingProgressService,
     private userNotes: UserNotesService,
     private router: Router,
   ) {
@@ -23,6 +27,10 @@ export class RedFruitComponent implements OnInit {
   ngOnInit() {
   }
 
+  getNextRoute() {
+    this.nextRoute = this.tastingProgress.goToNextRoute();
+  }
+  
   // define toggle function for button
   userInputToggle(redFruit) {
     //check if redFruit is in array
@@ -55,12 +63,12 @@ export class RedFruitComponent implements OnInit {
     console.log("group:", group);
 
     console.log('User data submitted.', this.redFruitResponse);
-    let redFruitData = { group: group, 
-                      value: { key: keyValue[0], 
+    let redFruitData = { group: group,
+                      value: { key: keyValue[0],
                                value: this.redFruitResponse }};
 
     console.log('redFruitData:', JSON.stringify(redFruitData));
     console.log('Mr Key:', Object.keys(redFruitData).join(''));
     this.userNotes.storeTastingData(redFruitData);
-  }  
+  }
 }

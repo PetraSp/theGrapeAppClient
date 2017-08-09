@@ -14,7 +14,9 @@
       <button class="button" (click)="userInputToggle('chemical')">Chemical</button>
       <button class="button" (click)="userInputToggle('none')">None</button>
   </div>
-  <button (click)="addToUserNotesObject()">Submit</button>
+  <footer class="main-footer">
+    <a class='btn-tasting'(click)='addToUserNotesObject(); getNextRoute()'>Submit</a>
+  </footer>
 </div>
 
 
@@ -34,5 +36,7 @@
         <button (click)="userInputToggle('chemical')">Chemical</button>
         <button (click)="userInputToggle('none')">None</button>
     </div>
-    <button (click)="addToUserNotesObject(); callAssemble();" [routerLink]="['/notes']">Go to Results</button>
+    <footer class="main-footer">
+      <a class='btn-tasting'(click)="addToUserNotesObject(); callAssemble();" [routerLink]="['/notes']">Go To Results</a>
+    </footer>
 </div>
