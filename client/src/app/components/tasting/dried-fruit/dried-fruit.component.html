@@ -1,24 +1,23 @@
-<!-- // Nose -->
 <div *ngIf = "location == '/tasting/nose/driedFruit' ">
-  <h3>Dried Fruit Aromas</h3>
-  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/blackFruit.svg">
+  <div class="title driedFruit-container">
+  <h3>Dried and cooked fruit</h3>
+  <img class='driedFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/newDriedFruit%402x.png">
   <p>Select the aromas you detect:</p>
 </div>
 
-<!-- // Palate -->
 <div *ngIf = "location == '/tasting/palate/driedFruit' ">
   <h3>Dried Fruit Tastes</h3>
-  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/blackFruit.svg">
+  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/newDriedFruit%402x.png">
   <p>Select the flavors you taste:</p>
 </div>
 
- <div class="blackFruitComponentOptions">
-   <button (click)="userInputToggle('dried figs')">Dried figs</button>
-   <button (click)="userInputToggle('jamminess')">Jamminess</button>
-   <button (click)="userInputToggle('prunes')">Prunes</button>
-   <button (click)="userInputToggle('baked, stewed fruits')">Baked, stewed fruits</button>
-   <button (click)="userInputToggle('raisins')">Raisins</button>
-   <button (click)="userInputToggle('none')">None</button>
+ <div class="driedFruitComponentOptions">
+   <button class="button" (click)="userInputToggle('dried figs')">Dried figs</button>
+   <button class="button" (click)="userInputToggle('jamminess')">Jamminess</button>
+   <button class="button" (click)="userInputToggle('prunes')">Prunes</button>
+   <button class="button" (click)="userInputToggle('baked, stewed fruits')">Baked, stewed fruits</button>
+   <button class="button" (click)="userInputToggle('raisins')">Raisins</button>
+   <button class="button" (click)="userInputToggle('none')">None</button>
 </div>
 
 <button (click)="addToUserNotesObject()">Submit</button>

@@ -1,0 +1,34 @@
+.herbsComponentOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.herbsComponentOptions .button {
+  width: 49%;
+  border: 1px solid grey;
+  border-radius: 0;
+  padding: .5em 1em;
+  background: transparent;
+  margin-bottom: 1em;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.herbs-img {
+  border: 2px solid #999;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+
+.herbsComponentOptions .button:hover {
+  border-color: #E7A524;
+  background-color: #E7A524;
+  color: #fff;
+}
+
+.herbs-container{
+  padding: 0 4%;
+}

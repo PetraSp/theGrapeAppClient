@@ -1,16 +1,19 @@
+<div class="title redFruit-container">
 <h3>Fresh Red Fruit</h3>
 
-<img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/redFruit.svg" alt="Picture of red fruit aromas... Yummy!">
+<img class='redFruit-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/freshRedFruit%402x.png" alt="Red fruit">
+<p class="select">Select the aromas you can <br> detect:</p>
 
-<p>Select the aromas you can <br> detect:</p>
+<section class="redFruitComponentOptions">
+  <button class="button" (click)="userInputToggle('strawberry')">Strawberry</button>
+  <button class="button" (click)="userInputToggle('red plum')">Red plum</button>
+  <button class="button" (click)="userInputToggle('raspberry')">Raspberry</button>
+  <button class="button" (click)="userInputToggle('red cherry')">Red Cherry</button>
+  <button class="button" (click)="userInputToggle('cranberry')">Cranberry</button>
+  <button class="button" (click)="userInputToggle('none')">None</button>
+</section>
 
- <div class="redFruitComponentOptions">
-   <button (click)="userInputToggle('strawberry')">Strawberry</button>
-   <button (click)="userInputToggle('red plum')">Red plum</button>
-   <button (click)="userInputToggle('raspberry')">Raspberry</button>
-   <button (click)="userInputToggle('red cherry')">Red Cherry</button>
-   <button (click)="userInputToggle('cranberry')">Cranberry</button>
-   <button (click)="userInputToggle('none')">None</button>
 </div>
+
 
 <button (click)="addToUserNotesObject()">Submit</button>

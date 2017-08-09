@@ -1,0 +1,34 @@
+.redFruitComponentOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.redFruitComponentOptions .button {
+  width: 49%;
+  border: 1px solid grey;
+  border-radius: 0;
+  padding: .5em 1em;
+  background: transparent;
+  margin-bottom: 1em;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.redFruit-img {
+  border: 2px solid #999;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+
+.redFruitComponentOptions .button:hover {
+  border-color: #E85956;
+  background-color: #89ABFB;
+  color: #fff;
+}
+
+.redFruit-container{
+  padding: 0 4%;
+}
