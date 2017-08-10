@@ -1,32 +1,30 @@
-<p>Scan works!</p>
+<div><img class="bottle" src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/StagsLeapScreenPic%402x.png"> </div>
 
 
 <div *ngIf="this.session.isAuthenticated">
 		Welcome, {{this.session.user.username}}!
 </div>
 
+<div class="wine-info">
  <form #scanForm='ngForm' (ngSubmit)='findWine(scanForm.value)'>
-  <p>
+  <p class="name">
     <label for="name">Name of the wine</label>
     <input type="text" name="name" placeholder="Name" ngModel>
   </p>
 
-  <p>
+  <p class="vineyard">
     <label for="vineyard">Vineyard</label>
     <input type="text" name="vineyard" placeholder="Vineyard" ngModel>
   </p>
 
-  <p>
+  <p class="vintage">
     <label for="vintage">Vintage</label>
     <input type="text" name="vintage" placeholder="Vintage (i.e: 2011)" ngModel>
   </p>
+</form>
+  <button class="btn-find"type='submit' >Find Wine!</button>
 
-  <button type='submit' >Find Wine!</button>
-</form> 
-
-<div class="">
-  <h1 class="">LALALALALLA {{wine.name}}</h1>
-  <button (click)="goToTastingIntro()">Choose wine and start tasting!</button>
+<button [routerLink]="['/tasting/intro']" class="btn-choose">Choose wine and start tasting!</button>
 </div>
 
 <!-- name: String,

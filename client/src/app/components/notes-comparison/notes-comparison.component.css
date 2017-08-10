@@ -77,15 +77,15 @@ a {
 }
 
 .btn-tasting {
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   letter-spacing: 0.51px;
   text-transform: uppercase;
   border: 1px solid #593E68;
   transition: all 300ms ease;
-  width: 300px;
+  width: 280px;
   text-decoration: none;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .btn-tasting:hover {

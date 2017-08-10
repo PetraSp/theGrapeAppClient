@@ -11,11 +11,12 @@
 
 <hr class="line">
 
+
 <section class="text-block">
   <h1 class="title">Congratulations!</h1>
   <h3 class="subtitle">Your tasting notes:</h3>
 
-  <p class="color">This wine is a {{notes.appearance.colorSchema}} colour.</p>
+  <p class="color" *ngIf = "notes.appearance.colorSchema != [] ">This wine is a {{notes.appearance.colorSchema}} colour.</p>
 
 <div class="noseContainer">
     Its nose profile denotes aromas including <div class="noseProfile" *ngIf = "notes.nose.floral != '' ">{{notes.nose.floral}},</div>
