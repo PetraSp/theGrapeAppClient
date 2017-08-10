@@ -49,6 +49,7 @@ width: 100%;
   border-color: #E7A524;
 }
 
+.herbsComponentOptions .button.active,
 .herbsComponentOptions .button:hover {
   background-color: #E7A524;
   color: #fff;

@@ -19,15 +19,35 @@
 </div>
 </div>
 
-
+<div class="title redFruit-container">
   <section class="redFruitComponentOptions">
-    <button class="button" (click)="userInputToggle(' strawberry')">Strawberry</button>
-    <button class="button" (click)="userInputToggle(' red plum')">Red plum</button>
-    <button class="button" (click)="userInputToggle(' raspberry')">Raspberry</button>
-    <button class="button" (click)="userInputToggle(' red cherry')">Red Cherry</button>
-    <button class="button" (click)="userInputToggle(' cranberry')">Cranberry</button>
-    <button class="button" (click)="userInputToggle('none')">None</button>
+
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.includes('strawberry')}"
+    (click)="userInputToggle('strawberry')">
+    Strawberry</button>
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.includes('red plum')}"
+    (click)="userInputToggle('red plum')">
+    Red plum</button>
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.includes('raspberry')}"
+    (click)="userInputToggle('raspberry')">
+    Raspberry</button>
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.includes('red cherry')}"
+    (click)="userInputToggle('red cherry')">
+    Red Cherry</button>
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.includes('cranberry')}"
+    (click)="userInputToggle('cranberry')">
+    Cranberry</button>
+    <button class="button"
+    [ngClass]="{'active': redFruitResponse.length < 1}"
+    (click)="userInputToggle('none')">None</button>
+
   </section>
+</div>
 
 
 <footer class="main-footer">

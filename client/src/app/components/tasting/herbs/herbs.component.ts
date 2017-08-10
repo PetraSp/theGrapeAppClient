@@ -17,8 +17,8 @@ export class HerbsComponent implements OnInit {
   nextRoute;
 
   constructor(
-    private userNotes: UserNotesService, 
-    private router: Router, 
+    private userNotes: UserNotesService,
+    private router: Router,
     private tastingProgress: TastingProgressService
   ) {
     this.location = router.url;
@@ -35,15 +35,17 @@ export class HerbsComponent implements OnInit {
   userInputToggle(herbs) {
     //check if herbs is in array
     console.log('herbs', herbs);
-    const isInArray = this.herbsResponse.some((userResponse) => {
-      return userResponse === herbs;
-    });
+    // const isInArray = this.herbsResponse.some((userResponse) => {
+    //   return userResponse === herbs;
+    // });
+    const isInArray = this.herbsResponse.includes(herbs);
+
     console.log('isInArray', isInArray);
     //if false, add
     if (!isInArray) {
       this.herbsResponse.push(herbs);
       if (this.herbsResponse[this.herbsResponse.length-1] ==='none') {
-        this.herbsResponse = [''];
+        this.herbsResponse = [];
       }
     }
     //if true, find index in array and delete
