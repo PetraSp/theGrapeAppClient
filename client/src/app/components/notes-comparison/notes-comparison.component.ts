@@ -12,6 +12,7 @@ export class NotesComparisonComponent implements OnInit {
   expertNotes;
   userNotes;
   colorSchema;
+  noseArray;
 
   constructor(
     private api: ApiService,
@@ -24,10 +25,15 @@ export class NotesComparisonComponent implements OnInit {
     this.userNotes = this.userNotesApi.notes;
     console.log("NFLSHGLHSILGBLSIBGILDBGLIDBGIL", this.userNotes);
     this.colorSchema = this.userNotes.appearance.colorSchema;
+    console.log("this.colorSchema", this.colorSchema);
     if (this.colorSchema === undefined) {
       this.colorSchema = 'none';
     }
-    console.log("this.colorSchema", typeof this.colorSchema, this.colorSchema);
+    console.log("expertNotes", typeof this.expertNotes.nose.quirky, this.expertNotes.nose.quirky);
+
+    // this.userNotes.nose.map((item) => {
+    //   this.noseArray.push(item)
+    // })
   }
 
 }
