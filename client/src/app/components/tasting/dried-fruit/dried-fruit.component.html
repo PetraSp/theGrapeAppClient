@@ -18,12 +18,32 @@
 
 <div class="title driedFruit-container">
    <section class="driedFruitComponentOptions">
-     <button class="button" (click)="userInputToggle(' dried figs')">Dried figs</button>
-     <button class="button" (click)="userInputToggle(' jamminess')">Jamminess</button>
-     <button class="button" (click)="userInputToggle(' prunes')">Prunes</button>
-     <button class="button" (click)="userInputToggle(' baked, stewed fruits')">Baked, stewed fruits</button>
-     <button class="button" (click)="userInputToggle(' raisins')">Raisins</button>
-     <button class="button" (click)="userInputToggle('none')">None</button>
+
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.includes('dried figs')}"
+     (click)="userInputToggle('dried figs')">
+     Dried figs</button>
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.includes('jamminess')}"
+     (click)="userInputToggle('jamminess')">
+     Jamminess</button>
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.includes('prunes')}"
+     (click)="userInputToggle('prunes')">
+       Prunes</button>
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.includes('baked, stewed fruits')}"
+     (click)="userInputToggle('baked, stewed fruits')">
+     Baked, stewed fruits</button>
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.includes('raisins')}"
+     (click)="userInputToggle('raisins')">
+     Raisins</button>
+     <button class="button"
+     [ngClass]="{'active': driedFruitResponse.length < 1}"
+     (click)="userInputToggle('none')">
+     None</button>
+
   </section>
 </div>
 

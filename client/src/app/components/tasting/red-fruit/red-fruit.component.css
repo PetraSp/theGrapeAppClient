@@ -49,6 +49,7 @@ width: 100%;
   border-color: #E85956;
 }
 
+.redFruitComponentOptions .button.active,
 .redFruitComponentOptions .button:hover {
   background-color: #E85956;
   color: #fff;

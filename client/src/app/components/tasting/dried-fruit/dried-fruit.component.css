@@ -49,6 +49,7 @@ width: 100%;
   border-color: #E7A524;
 }
 
+.driedFruitComponentOptions .button.active,
 .driedFruitComponentOptions .button:hover {
   background-color: #E7A524;
   color: #fff;

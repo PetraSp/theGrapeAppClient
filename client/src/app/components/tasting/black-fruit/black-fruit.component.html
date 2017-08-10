@@ -20,14 +20,38 @@
 
 <div class="title blackFruit-container">
   <section class="blackFruitComponentOptions">
-    <button class="button" (click)="userInputToggle(' blackcurrant')">Blackcurrant</button>
-    <button class="button" (click)="userInputToggle(' black plum')">Black plum</button>
-    <button class="button" (click)="userInputToggle(' blackberry')">Blackberry</button>
-    <button class="button" (click)="userInputToggle(' black cherry')">Black cherry</button>
-    <button class="button" (click)="userInputToggle(' blueberry')">Blueberry</button>
-    <button class="button" (click)="userInputToggle('none')">None</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('blackcurrant')}"
+     (click)="userInputToggle('blackcurrant')">
+     Blackcurrant</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('black plum')}"
+    (click)="userInputToggle('black plum')">
+    Black plum</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('raspberry')}"
+    (click)="userInputToggle('raspberry')">
+    Raspberry</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('blackberry')}"
+    (click)="userInputToggle('blackberry')">
+    Blackberry</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('blackcherry')}"
+    (click)="userInputToggle('blackcherry')">
+    Black cherry</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.includes('blueberry')}"
+    (click)="userInputToggle('blueberry')">
+    Blueberry</button>
+    <button class="button"
+    [ngClass]="{'active': blackFruitResponse.length < 1}"
+    (click)="userInputToggle('none')">
+    None</button>
+
   </section>
 </div>
+
 
 <footer class="main-footer">
   <a class='btn-tasting'(click)='addToUserNotesObject(); getNextRoute()'>Submit</a>

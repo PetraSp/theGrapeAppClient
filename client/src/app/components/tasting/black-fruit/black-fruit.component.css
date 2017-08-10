@@ -49,6 +49,7 @@ width: 100%;
   border-color: #534F57;
 }
 
+.blackFruitComponentOptions .button.active,
 .blackFruitComponentOptions .button:hover {
   background-color: #534F57;
   color: #fff;

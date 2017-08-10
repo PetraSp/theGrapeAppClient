@@ -32,15 +32,17 @@ export class FloralComponent implements OnInit {
   userInputToggle(floral) {
     // check if floral is in array
     console.log('floral', floral);
-    const isInArray = this.floralResponse.some((userResponse) => {
-      return userResponse === floral;
-    });
+    // const isInArray = this.floralResponse.some((userResponse) => {
+    //   return userResponse === floral;
+    // });
+    const isInArray = this.floralResponse.includes(floral);
+
     console.log('isInArray', isInArray);
     // if false, add
     if (!isInArray) {
       this.floralResponse.push(floral);
       if (this.floralResponse[this.floralResponse.length-1] === 'none') {
-        this.floralResponse = [''];
+        this.floralResponse = [];
         console.log("working");
       }
     }
