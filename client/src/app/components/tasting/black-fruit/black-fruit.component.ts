@@ -44,7 +44,7 @@ export class BlackFruitComponent implements OnInit {
     if (!isInArray) {
       this.blackFruitResponse.push(blackFruit);
       if (this.blackFruitResponse[this.blackFruitResponse.length-1] ==='none') {
-        this.blackFruitResponse = [];
+        this.blackFruitResponse = [''];
       }}
     //if true, find index in array and delete
     else {
