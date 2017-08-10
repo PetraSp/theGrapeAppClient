@@ -1,9 +1,21 @@
-<p>
-  profile works!
-</p>
 
-<a href="#">The Grape App || </a>
+<!--
+<p class="">Username: {{user}}</p> -->
 
-<p class="">Username: {{user}}</p>
+<!-- <p class="">Username: {{user}}</p> -->
 
-<button [routerLink]="['/scan']">Scan a wine!</button>
+<div *ngIf="this.session.isAuthenticated">
+
+  <h2>Welcome, {{this.session.user.username}}!</h2>
+  <img src="{{this.session.user.avatar}}" alt="Avatar for user">
+
+
+  <h3 class="">User Profile Details:</h3>
+
+  <p>Username: {{this.session.user.username}}</p>
+  <p>Email: {{this.session.user.email}}</p>
+  <p>City: {{this.session.user.city}}</p>
+
+
+  <button [routerLink]="['/scan']">Scan a wine and take the test!</button>
+</div>

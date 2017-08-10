@@ -28,23 +28,23 @@ export class UserNotesService {
   // Function which activates on SUBMIT TEST at the end.
   // Assembles the object before sending to database.
   assembleTastingNotes() {
-
     let notes = {     // dataObject
-      appearance: {
-        
-      }, // Group
+      appearance: {}, // Group
       nose: {},       // Group
       palate: {}      // Group
     };
 
+    console.log('Inside TASTING NOTES. This is empty notes:', notes);
+
     // loops through data Array
     this.arrayOfData.forEach((dataObject) => {
+      console.log('Loop through array of data:', dataObject);
       // Find main key for matching subObject with group
       const dataObjectKey = dataObject.group;
-      console.log('dataObjectKey', dataObjectKey);
+      console.log('Find main key:', dataObjectKey);
       // create subObject {key: value} from main dataObject
       const data = dataObject.value
-      console.log('data', data);
+      console.log('create subObject', data);
 
       // Find to which group the subObject belongs using dataObjectKey matching
       if (dataObjectKey === 'appearance'){
@@ -52,11 +52,11 @@ export class UserNotesService {
         console.log('itsa appearance!!!');
         notes.appearance[data.key] = data.value;
       }
-      if (dataObjectKey === 'nose'){
+      else if (dataObjectKey === 'nose'){
         console.log('itsa nose!!');
         notes.nose[data.key] = data.value;
       }
-      if (dataObjectKey === 'palate'){
+      else if (dataObjectKey === 'palate'){
         console.log('itsa palate!!');
         notes.palate[data.key] = data.value;
       }
@@ -65,14 +65,13 @@ export class UserNotesService {
       }
     });
     console.log(JSON.stringify(notes));
-    this.notes = notes;
-    this.addUserNotes();
+    this.addUserNotes(notes);
   }
 
   // Access API. Stores user notes in database
-  addUserNotes() {
-  console.log('We are in addUserNotes', this.notes)
-  return this.http.post(`${this.BASE_URL}/api/userNotes`, this.notes)
+  addUserNotes(notes) {
+  console.log('We are in addUserNotes', notes)
+  return this.http.post(`${this.BASE_URL}/api/userNotes`, notes)
     // .map((res) => res.json())
     .subscribe(
           res => {

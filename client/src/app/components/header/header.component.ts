@@ -16,14 +16,15 @@ export class HeaderComponent implements OnInit {
   title = 'The Grape App';
 
   constructor(
-    private tastingProgress: TastingProgressService, 
+    private tastingProgress: TastingProgressService,
     private session: SessionService,
-    private link: LinkService) {
+    private link: LinkService,
+    private router: Router) {
+      this.location = router.url;
   }
 
   ngOnInit() {
     this.link.event.subscribe((data) => {
-      console.log("Our data!!!!", data);
     });
   }
 

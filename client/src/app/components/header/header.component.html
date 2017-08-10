@@ -1,9 +1,16 @@
 
 <div class="header">
-	<div class="previous">
-		<img id='previous-icon' (click)='getPreviousRoute()' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/chevronLeft.svg" >
+
+	<div *ngIf = "location != '/tasting/intro' ">
+	<div class="previous" (click)='getPreviousRoute()'>
+		<img id='previous-icon' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/chevronLeft.svg" >
 	</div>
-		<p id="title">{{title}}</p>
+</div>
+
+	<div class="title">
+		<p>{{title}}</p>
+	</div>
+
 
 	<div *ngIf="this.session.isAuthenticated; else loggedIn">
 		Welcome, {{this.session.user.username}}!
