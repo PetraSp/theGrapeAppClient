@@ -1,5 +1,16 @@
-<div><img class="bottle" src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/StagsLeapScreenPic%402x.png"> </div>
 
+ <div *ngIf="wine!==''; else default">
+  <img class="bottle" src="{{wine.label}}">
+</div> 
+<ng-template #default>
+  <img class="bottle" src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/StagsLeapScreenPic%402x.png">
+</ng-template>
+
+
+
+
+
+<p class="">{{wine.name}}</p>
 
 <div *ngIf="this.session.isAuthenticated">
 		Welcome, {{this.session.user.username}}!
@@ -15,7 +26,6 @@
   <button class="btn-find" type='submit' >Find Wine!</button>
 </form>
 
-<p class="">{{wine.name}}</p>
 <button [routerLink]="['/tasting/intro']" class="btn-choose">Choose wine and start tasting!</button>
 </div>
 
