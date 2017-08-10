@@ -24,8 +24,10 @@
   <button type='submit' >Find Wine!</button>
 </form> 
 
-<button [routerLink]="['/tasting/intro']">Choose wine and start tasting!</button>
-
+<div class="">
+  <h1 class="">LALALALALLA {{wine.name}}</h1>
+  <button (click)="goToTastingIntro()">Choose wine and start tasting!</button>
+</div>
 
 <!-- name: String,
   vineyard: String,
