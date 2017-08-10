@@ -13,11 +13,14 @@ export class HerbsComponent implements OnInit {
 
   //make an array for the user input from the toggle buttons
   herbsResponse = [];
-  location = '';
-  pattern = "/^(.*[\\\/])/";
+  location;
   nextRoute;
 
-  constructor(private userNotes: UserNotesService, private router: Router, private tastingProgress: TastingProgressService) {
+  constructor(
+    private userNotes: UserNotesService, 
+    private router: Router, 
+    private tastingProgress: TastingProgressService
+  ) {
     this.location = router.url;
   }
 
@@ -56,22 +59,17 @@ export class HerbsComponent implements OnInit {
     const sliceLocation = this.location.slice(9);
     const parsedLocation = sliceLocation.match("/(?=[^/]*$)");
     const group = sliceLocation.slice(0, parsedLocation.index);
+    const keyValue = sliceLocation.match("([^/]+$)");
     console.log("group:", group);
 
     console.log('User data submitted.', this.herbsResponse);
     let herbsData = { group: group,
-                      value: { key: 'herbs',
+                      value: { key: keyValue[0],
                                value: this.herbsResponse }};
 
     console.log('herbsData:', JSON.stringify(herbsData));
     console.log('Mr Key:', Object.keys(herbsData).join(''));
     this.userNotes.storeTastingData(herbsData);
   }
-
-  callAssemble() {
-    console.log('callAssemble called.');
-    this.userNotes.assembleTastingNotes();
-  }
-
 
 }
