@@ -37,15 +37,17 @@ export class QuirkyComponent implements OnInit {
   userInputToggle(quirky) {
     //check if quirky is in array
     console.log('quirky', quirky);
-    const isInArray = this.quirkyResponse.some((userResponse) => {
-      return userResponse === quirky;
-    });
+    // const isInArray = this.quirkyResponse.some((userResponse) => {
+    //   return userResponse === quirky;
+    // });
+    const isInArray = this.quirkyResponse.includes(quirky);
+
     console.log('isInArray', isInArray);
     //if false, add
     if (!isInArray) {
       this.quirkyResponse.push(quirky);
       if (this.quirkyResponse[this.quirkyResponse.length-1] ==='none') {
-        this.quirkyResponse = [''];
+        this.quirkyResponse = [];
       }
     }
     //if true, find index in array and delete
