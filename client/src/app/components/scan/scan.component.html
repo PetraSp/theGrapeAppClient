@@ -8,19 +8,10 @@
 <div class="wine-info">
  <form #scanForm='ngForm' (ngSubmit)='findWine(scanForm.value)'>
   <p class="name">
-    <label for="name">Name of the wine</label>
+    <label for="name">Search for Wine: </label>
     <input type="text" name="name" placeholder="Name" ngModel>
   </p>
 
-  <p class="vineyard">
-    <label for="vineyard">Vineyard</label>
-    <input type="text" name="vineyard" placeholder="Vineyard" ngModel>
-  </p>
-
-  <p class="vintage">
-    <label for="vintage">Vintage</label>
-    <input type="text" name="vintage" placeholder="Vintage (i.e: 2011)" ngModel>
-  </p>
   <button class="btn-find" type='submit' >Find Wine!</button>
 </form>
 
