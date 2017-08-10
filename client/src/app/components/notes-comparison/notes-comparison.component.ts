@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { UserNotesService } from '../../services/user-notes.service';
 
 @Component({
   selector: 'app-notes-comparison',
@@ -7,13 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComparisonComponent implements OnInit {
 
-  constructor() { }
+  expertNotes;
+  userNotes;
+  colorSchema;
+
+  constructor(
+    private api: ApiService,
+    private userNotesApi: UserNotesService
+  ) { }
 
   ngOnInit() {
-    // this.session.getWines()
-    //   .subscribe((wineList) => {
-    //     this.wineList = wineList;
-    //   });
+    const wineObject = JSON.parse(this.api.wineName._body);
+    this.expertNotes = wineObject[0].expertNotes;
+    this.userNotes = this.userNotesApi.notes;
+    console.log("NFLSHGLHSILGBLSIBGILDBGLIDBGIL", this.userNotes);
+    this.colorSchema = this.userNotes.appearance.colorSchema;
+    if (this.colorSchema === undefined) {
+      this.colorSchema = 'none';
+    }
+    console.log("this.colorSchema", typeof this.colorSchema, this.colorSchema);
   }
 
 }

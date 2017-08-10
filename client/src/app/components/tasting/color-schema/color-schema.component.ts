@@ -30,6 +30,7 @@ export class ColorSchemaComponent implements OnInit {
 
   // define toggle function for button
   userInputToggle(colorRange, colorName) {
+    // console.log('check!', colorRange);
     const colorRangeArray = [colorRange, colorName];
 
     if (this.colorResponse.length === 1) {
