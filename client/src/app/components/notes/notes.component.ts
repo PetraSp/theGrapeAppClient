@@ -12,6 +12,7 @@ export class NotesComponent implements OnInit {
   notes;
   wineName;
 
+
   constructor(
     private userNotes: UserNotesService,
     private api: ApiService
@@ -23,7 +24,6 @@ export class NotesComponent implements OnInit {
     const wineObject = JSON.parse(this.api.wineName._body);
     this.wineName = wineObject[0];
     console.log("this.wineName", this.wineName.name);
-
   }
 
 }
