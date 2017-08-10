@@ -17,7 +17,7 @@
     <p class="text">Swirl the wine in your glass, and take a good sniff</p>
     <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/Swirling.png" alt="swirling">
     <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/Sniffing.png" alt="sniffling" class='last'>
-    <p class="text">Consider its aromas (the 'nose'). What does the wine remind you of?</p>
+    <p class="text">Consider its aromas (the <span [routerLink]="['/tasting/palate/quirky']">'nose'</span>). What does the wine remind you of?</p>
   </div>
   <footer class="main-footer">
     <a class='btn-tasting'(click)='getNextRoute()'>Make your choice</a>
