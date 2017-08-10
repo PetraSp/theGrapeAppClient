@@ -29,15 +29,17 @@ export class DriedFruitComponent implements OnInit {
   userInputToggle(driedFruit) {
     // check if driedFruit is in array
     console.log('driedFruit', driedFruit);
-    const isInArray = this.driedFruitResponse.some((userResponse) => {
-      return userResponse === driedFruit;
-    });
+    // const isInArray = this.driedFruitResponse.some((userResponse) => {
+    //   return userResponse === driedFruit;
+    // });
+    const isInArray = this.driedFruitResponse.includes(driedFruit);
+
     console.log('isInArray', isInArray);
     //if false, add
     if (!isInArray) {
       this.driedFruitResponse.push(driedFruit);
       if (this.driedFruitResponse[this.driedFruitResponse.length-1] ==='none') {
-        this.driedFruitResponse = [''];
+        this.driedFruitResponse = [];
       }
     }
     //if true, find index in array and delete

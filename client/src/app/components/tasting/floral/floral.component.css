@@ -41,14 +41,15 @@
   margin-bottom: 1em;
 }
 
-.floralComponentOptions .button.full-width {
+/*.floralComponentOptions .button.full-width {
 width: 100%;
-}
+}*/
 
 .floralComponentOptions.aromas .button {
   border-color: #89ABFB;
 }
 
+.floralComponentOptions .button.active,
 .floralComponentOptions.aromas .button:hover {
   border-color: #89ABFB;
   background-color: #89ABFB;

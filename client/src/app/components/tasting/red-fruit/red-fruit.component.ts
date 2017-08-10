@@ -30,20 +30,22 @@ export class RedFruitComponent implements OnInit {
   getNextRoute() {
     this.nextRoute = this.tastingProgress.goToNextRoute();
   }
-  
+
   // define toggle function for button
   userInputToggle(redFruit) {
     //check if redFruit is in array
     console.log('redFruit', redFruit);
-    const isInArray = this.redFruitResponse.some((userResponse) => {
-      return userResponse === redFruit;
-    });
+    // const isInArray = this.redFruitResponse.some((userResponse) => {
+    //   return userResponse === redFruit;
+    // });
+    const isInArray = this.redFruitResponse.includes(redFruit);
+
     console.log('isInArray', isInArray);
     //if false, add
     if (!isInArray) {
       this.redFruitResponse.push(redFruit);
       if (this.redFruitResponse[this.redFruitResponse.length-1] ==='none') {
-        this.redFruitResponse = [''];
+        this.redFruitResponse = [];
       }
     }
     //if true, find index in array and delete

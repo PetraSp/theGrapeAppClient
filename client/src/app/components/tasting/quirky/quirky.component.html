@@ -10,15 +10,37 @@
 
 <div class="title quirky-container">
     <section class="quirkyComponentOptions">
-        <button class="button" (click)="userInputToggle('toffee')">Toffee</button>
-        <button class="button" (click)="userInputToggle('mushroom')">Mushroom</button>
-        <button class="button" (click)="userInputToggle('chocolate')">Chocolate</button>
-        <button class="button" (click)="userInputToggle('wet leaves')">Wet Leaves</button>
-        <button class="button" (click)="userInputToggle('coffee')">Coffee</button>
-        <button class="button" (click)="userInputToggle('forest floor')">Forest Floor</button>
-        <button class="button" (click)="userInputToggle('meat/leather')">Meat/Leather</button>
-        <button class="button" (click)="userInputToggle('chemical')">Chemical</button>
-        <button class="button" (click)="userInputToggle('none')">None</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('toffee')}"
+        (click)="userInputToggle('toffee')">
+        Toffee</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('mushroom')}"
+        (click)="userInputToggle('mushroom')">Mushroom</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('chocolate')}"
+        (click)="userInputToggle('chocolate')">Chocolate</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('wet leaves')}"
+        (click)="userInputToggle('wet leaves')">Wet Leaves</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('coffee')}"
+        (click)="userInputToggle('coffee')">
+        Coffee</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('forest floor')}"
+        (click)="userInputToggle('forest floor')">
+        Forest Floor</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('meat/leather')}" (click)="userInputToggle('meat/leather')">
+        Meat/Leather</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.includes('chemical')}"
+        (click)="userInputToggle('chemical')">
+        Chemical</button>
+        <button class="button"
+        [ngClass]="{'active': quirkyResponse.length < 1}"
+        (click)="userInputToggle('none')">None</button>
     </section>
 </div>
 

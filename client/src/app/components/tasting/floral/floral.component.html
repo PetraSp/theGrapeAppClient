@@ -6,11 +6,25 @@
   <p class="select">Select the aromas you detect:</p>
 
   <section class="floralComponentOptions aromas">
-    <button class="button" (click)="userInputToggle('rose')">Rose</button>
-    <button class="button" (click)="userInputToggle('violet')">Violet</button>
-    <button class="button" (click)="userInputToggle('potpourri')">Potpourri</button>
-    <button class="button" (click)="userInputToggle('perfumed/floral')">Perfumed/Floral</button>
-    <button class="button full-width" (click)="userInputToggle('none')">None</button>
+    <button class="button"
+    [ngClass]="{'active': floralResponse.includes('rose')}"
+    (click)="userInputToggle('rose')">
+    Rose</button>
+    <button class="button"
+    [ngClass]="{'active': floralResponse.includes('violet')}"
+    (click)="userInputToggle('violet')">
+    Violet</button>
+    <button class="button"
+    [ngClass]="{'active': floralResponse.includes('potpourri')}"
+    (click)="userInputToggle('potpourri')">
+    Potpourri</button>
+    <button class="button"
+    [ngClass]="{'active': floralResponse.includes('perfumed/floral')}"
+    (click)="userInputToggle('perfumed/floral')">
+      Perfumed/Floral</button>
+    <button class="button"
+    [ngClass]="{'active': floralResponse.length < 1}"
+    (click)="userInputToggle('none')">None</button>
   </section>
 
 </div>
@@ -26,11 +40,25 @@
 
 
     <section class="floralComponentOptions palate">
-      <button class="button" (click)="userInputToggle('rose')">Rose</button>
-      <button class="button" (click)="userInputToggle('violet')">Violet</button>
-      <button class="button" (click)="userInputToggle('potpourri')">Potpourri</button>
-      <button class="button" (click)="userInputToggle('perfumed/floral')">Perfumed/Floral</button>
-      <button class="button full-width" (click)="userInputToggle('none')">None</button>
+      <button class="button"
+      [ngClass]="{'active': floralResponse.includes('rose')}"
+      (click)="userInputToggle('rose')">
+      Rose</button>
+      <button class="button"
+      [ngClass]="{'active': floralResponse.includes('violet')}"
+      (click)="userInputToggle('violet')">
+      Violet</button>
+      <button class="button"
+      [ngClass]="{'active': floralResponse.includes('potpourri')}"
+      (click)="userInputToggle('potpourri')">
+      Potpourri</button>
+      <button class="button"
+      [ngClass]="{'active': floralResponse.includes('perfumed/floral')}"
+      (click)="userInputToggle('perfumed/floral')">
+        Perfumed/Floral</button>
+      <button class="button"
+      [ngClass]="{'active': floralResponse.length < 1}"
+      (click)="userInputToggle('none')">None</button>
     </section>
 </div>
 

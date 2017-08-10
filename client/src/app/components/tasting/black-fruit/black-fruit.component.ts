@@ -32,15 +32,19 @@ export class BlackFruitComponent implements OnInit {
   userInputToggle(blackFruit) {
     // check if blackFruit is in array
     console.log('blackFruit', blackFruit);
-    const isInArray = this.blackFruitResponse.some((userResponse) => {
-      return userResponse === blackFruit;
-    });
+    // const isInArray = this.blackFruitResponse.some((userResponse) => {
+    //   return userResponse === blackFruit;
+    // });
+    const isInArray = this.blackFruitResponse.includes(blackFruit);
+
+
+
     console.log('isInArray', isInArray);
     //if false, add
     if (!isInArray) {
       this.blackFruitResponse.push(blackFruit);
       if (this.blackFruitResponse[this.blackFruitResponse.length-1] ==='none') {
-        this.blackFruitResponse = [''];
+        this.blackFruitResponse = [];
       }}
     //if true, find index in array and delete
     else {
