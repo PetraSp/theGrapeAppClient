@@ -45,7 +45,7 @@ export class HerbsComponent implements OnInit {
     if (!isInArray) {
       this.herbsResponse.push(herbs);
       if (this.herbsResponse[this.herbsResponse.length-1] ==='none') {
-        this.herbsResponse = [];
+        this.herbsResponse = [''];
       }
     }
     //if true, find index in array and delete
