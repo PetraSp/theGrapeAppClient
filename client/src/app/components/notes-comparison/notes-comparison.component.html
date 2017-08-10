@@ -12,13 +12,43 @@
   <li class="flex-item">{{userNotes.appearance.colorSchema[0]}} - {{userNotes.appearance.colorSchema[1]}}</li>
   <li class="flex-item">{{expertNotes.appearance.colorSchema}}</li>
   <h4 class="flex-item heading ">Aromas</h4>
-  <li class="flex-item">{{userNotes.nose.floral}}, 
-    {{userNotes.nose.redFruit}}, 
-    {{userNotes.nose.blackFruit}}, {{userNotes.nose.driedFruit}}, {{userNotes.nose.herbs}}, {{userNotes.nose.quirky}}</li>
-  <li class="flex-item">{{expertNotes.nose.floral}}, {{expertNotes.nose.redFruit}}, {{expertNotes.nose.blackFruit}}, {{expertNotes.nose.driedFruit}}, {{expertNotes.nose.herbs}}, {{expertNotes.nose.quirky}}</li>
+
+  <li class="flex-item">
+    <a *ngIf = "userNotes.nose.floral != '' ">Floral: {{userNotes.nose.floral}}</a>
+    <a *ngIf = "userNotes.nose.redFruit != '' ">Red Fruit: {{userNotes.nose.redFruit}},</a>
+    <a *ngIf = "userNotes.nose.blackFruit != '' ">Black Fruit: {{userNotes.nose.blackFruit}},</a>
+    <a *ngIf = "userNotes.nose.driedFruit != '' ">Dried Fruit: {{userNotes.nose.driedFruit}},</a>
+    <a *ngIf = "userNotes.nose.herbs != '' ">Herbs and Spices: {{userNotes.nose.herbs}},</a>
+    <a *ngIf = "userNotes.nose.quirky != '' ">Quirky: {{userNotes.nose.quirky}}</a>
+  </li>
+
+  <li class="flex-item">
+    <a *ngIf = "expertNotes.nose.floral != 'none' ">Floral:  {{expertNotes.nose.floral}},</a>
+    <a *ngIf = "expertNotes.nose.redFruit != 'none' ">Red Fruit: {{expertNotes.nose.redFruit}},</a>
+    <a *ngIf = "expertNotes.nose.blackFruit != 'none' ">Black Fruit: {{expertNotes.nose.blackFruit}},</a>
+    <a *ngIf = "expertNotes.nose.driedFruit != 'none' ">Dried Fruit: {{expertNotes.nose.driedFruit}},</a>
+    <a *ngIf = "expertNotes.nose.herbs != 'none' ">Herbs and Spices: {{expertNotes.nose.herbs}}</a>
+    <a *ngIf = "expertNotes.nose.quirky != 'none' ">Quirky: {{expertNotes.nose.quirky}}</a>
+  </li>
   <h4 class="flex-item heading ">Palate</h4>
-  <li class="flex-item">{{userNotes.palate.floral}}, {{userNotes.palate.redFruit}}, {{userNotes.palate.blackFruit}}, {{userNotes.palate.driedFruit}}, {{userNotes.palate.herbs}}, {{userNotes.palate.quirky}}</li>
-  <li class="flex-item">{{expertNotes.nose.floral}}, {{expertNotes.nose.redFruit}}, {{expertNotes.nose.blackFruit}}, {{expertNotes.nose.driedFruit}}, {{expertNotes.nose.herbs}}, {{expertNotes.nose.quirky}}</li>
+
+  <li class="flex-item">
+    <a *ngIf = "userNotes.palate.floral != '' ">Floral:  {{userNotes.palate.floral}}</a>
+    <a *ngIf = "userNotes.palate.redFruit != '' ">Red Fruit: {{userNotes.palate.redFruit}}</a>
+    <a *ngIf = "userNotes.palate.blackFruit != '' ">Black Fruit: {{userNotes.palate.blackFruit}}</a>
+    <a *ngIf = "userNotes.palate.driedFruit != '' ">Dried Fruit: {{userNotes.palate.driedFruit}}</a>
+    <a *ngIf = "userNotes.palate.herbs != '' ">Herbs and Spices: {{userNotes.palate.herbs}}</a>
+    <a *ngIf = "userNotes.palate.quirky != '' ">Quirky: {{userNotes.palate.quirky}}</a>
+  </li>
+
+  <li class="flex-item">
+    <a *ngIf = "expertNotes.palate.floral != 'none' ">Floral:  {{expertNotes.palate.floral}}</a>
+    <a *ngIf = "expertNotes.palate.redFruit != 'none' ">Red Fruit: {{expertNotes.palate.redFruit}}</a>
+    <a *ngIf = "expertNotes.palate.blackFruit != 'none' ">Black Fruit: {{expertNotes.palate.blackFruit}}</a>
+    <a *ngIf = "expertNotes.palate.driedFruit != 'none' ">Dried Fruit: {{expertNotes.palate.driedFruit}}</a>
+    <a *ngIf = "expertNotes.palate.herbs != 'none' ">Herbs and Spices: {{expertNotes.palate.herbs}}</a>
+    <a *ngIf = "expertNotes.palate.quirky != 'none' ">Quirky: {{expertNotes.palate.quirky}}</a>
+  </li>
 </ul>
 
 <footer class="main-footer">

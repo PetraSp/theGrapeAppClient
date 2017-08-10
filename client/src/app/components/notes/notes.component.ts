@@ -10,19 +10,21 @@ import { ApiService } from '../../services/api.service';
 })
 export class NotesComponent implements OnInit {
 
-  wineName;
-  vineyard;
-  vintage;
+  notes;
+  // wineName;
+  // vineyard;
+  // vintage;
 
   constructor(private userNotes: UserNotesService, private api: ApiService) {}
 
   ngOnInit() {
-    const wineObject = JSON.parse(this.api.wineName._body);
-    this.wineName = wineObject[0].name;
-    this.vineyard = wineObject[0].vineyard;
-    this.vintage = wineObject[0].vintage;
-    console.log("THIS . WINE . NAME", this.wineName);
-    console.log("THIS . WINE . vineyard", this.vineyard);
+    this.notes = this.userNotes.notes;
+    // const wineObject = JSON.parse(this.api.wineName._body);
+    // this.wineName = wineObject[0].name;
+    // this.vineyard = wineObject[0].vineyard;
+    // this.vintage = wineObject[0].vintage;
+    // console.log("THIS . WINE . NAME", this.wineName);
+    // console.log("THIS . WINE . vineyard", this.vineyard);
   }
 
 }
