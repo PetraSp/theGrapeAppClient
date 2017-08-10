@@ -3,13 +3,19 @@
     <h3>Sweet, savoury and quirky</h3>
     <hr class="line">
     <img class='quirky-img' src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/Assets+from+Sketch/pictures/newSweetSavouryQuirky%402x.png" alt="Quirky aromas">
-
-    <p class="select">Select the aromas <br>you have decided:</p>
 </div>
 
+<div *ngIf = "location == '/tasting/nose/quirky' ">
+  <p class="select">Select the aromas you have decided:</p>
+</div>
+
+<div *ngIf = "location == '/tasting/palate/quirky' ">
+  <p class="select">Select the flavours you have detected:</p>
+</div>
 
 <div class="title quirky-container">
     <section class="quirkyComponentOptions">
+
         <button class="button"
         [ngClass]="{'active': quirkyResponse.includes('toffee')}"
         (click)="userInputToggle('toffee')">
@@ -41,6 +47,7 @@
         <button class="button"
         [ngClass]="{'active': quirkyResponse.length < 1}"
         (click)="userInputToggle('none')">None</button>
+
     </section>
 </div>
 
