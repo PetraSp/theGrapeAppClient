@@ -1,4 +1,8 @@
 <div>
+<<<<<<< HEAD
+<img class="logo" src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/smallLogo.svg" alt="small logo">
+=======
+>>>>>>> 0a10ff32e4858b3d94f7aaa2b10414f6c0909080
     <h2>Login</h2>
     <div *ngIf="error">
       {{ error }}
@@ -13,10 +17,11 @@
           <label for="password">Password</label>
           <input type="password" name="password" placeholder="password" ngModel>
         </p>
+        <button type= "submit">Sign in</button>
 
-        <button type='submit' >Sign in</button>
     </form>
+    <p>Have an account? </p>
 
-    <p>Have an account?  <button [routerLink]="['/signup']">Sign Up</button></p> 
+    <button [routerLink]="['/signup']">Sign Up</button>
 
 </div>

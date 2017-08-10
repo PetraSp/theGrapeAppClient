@@ -1,0 +1,80 @@
+.bottle {
+  margin: 0 auto;
+  display: block;
+  height: 600px;
+}
+
+.wine-info {
+  padding: 0 4%;
+}
+
+.wine-info .name {
+  color: #593E68;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.wine-info .vineyard {
+  color: #593E68;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.wine-info .vintage {
+  color: #593E68;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+.btn-find {
+  padding: 1em 2em;
+  background: transparent;
+  letter-spacing: 0.51px;
+  text-transform: uppercase;
+  border: 1px solid #593E68;
+  transition: all 300ms ease;
+  width: 200px;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.btn-find:hover {
+  background-color: #593e68;
+  color: #fff;
+}
+
+ .btn-choose {
+  padding: 1em 2em;
+  background: transparent;
+  letter-spacing: 0.51px;
+  text-transform: uppercase;
+  border: 1px solid #593E68;
+  transition: all 300ms ease;
+  width: 340px;
+  text-decoration: none;
+  /*margin: auto;*/
+  transition: all 300ms ease;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 2em;
+  font-size: 14px;
+}
+
+.btn-choose:hover {
+  background-color: #593e68;
+  color: #fff;
+}
+
+input {
+    width: 200px;
+    padding: 0 20px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 2;
+}
