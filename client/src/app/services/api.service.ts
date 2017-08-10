@@ -8,6 +8,7 @@ export class ApiService {
 
   BASE_URL: string = 'http://localhost:3000';
   userQuery = '';
+  wineName;
 
   constructor(
     private http: Http,
@@ -25,13 +26,14 @@ export class ApiService {
 
   getWineBySearchQuery(userQuery) {
     this.userQuery = userQuery;
-    return this.http.get(`${this.BASE_URL}/api/wine-search`, this.userQuery).subscribe(
-          res => {
+    return this.http.post(`${this.BASE_URL}/api/wine-search`, {wineName: userQuery})
+    .map(res => {
             console.log('Search has been sent');
-          },
-          error => {
-            console.log(error);
-          });
+            this.wineName = res;
+            console.log("this.wineName", this.wineName);
+            return res
+          })
+          // .catch(err => {console.log(err)})
   }
 
   getTastings() {
