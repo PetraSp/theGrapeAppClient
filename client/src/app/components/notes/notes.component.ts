@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserNotesService } from '../../services/user-notes.service';
 
 @Component({
   selector: 'app-notes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesComponent implements OnInit {
 
-  constructor() { }
+  notes;
+
+  constructor(private userNotes: UserNotesService) {}
 
   ngOnInit() {
+    this.notes = this.userNotes.notes;
+    console.log("NFLSHGLHSILGBLSIBGILDBGLIDBGIL", this.notes)
   }
 
 }

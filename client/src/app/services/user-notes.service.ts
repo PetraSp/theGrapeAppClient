@@ -65,6 +65,7 @@ export class UserNotesService {
       }
     });
     console.log(JSON.stringify(notes));
+    this.notes = notes;
     this.addUserNotes(notes);
   }
 
