@@ -40,4 +40,11 @@ export class UserApiService {
       .map((res) => res.json())
   }
 
+
+  updateUser(user) {
+    console.log('updateUser Called!', user.id, user);
+    return this.http.put(`${this.BASE_URL}/api/user-entries/${user.id}`, user)
+      .map((res) => res.json())
+  }
+
 }

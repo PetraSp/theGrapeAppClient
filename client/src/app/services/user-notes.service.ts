@@ -82,26 +82,3 @@ export class UserNotesService {
           });
   }
 }
-
-
-
-// {
-//   "appearance": {
-//     "colorSchema":["ruby","pale"]
-//   },
-//   "nose":{
-//     "floral":["rose","violet"],
-//     "redFruit":["strawberry","red plum","raspberry","red cherry","cranberry"],
-//     "blackFruit":["","blackcurrant","black plum"],
-//     "driedFruit":["dried figs","jamminess","prunes","baked, stewed fruits","raisins"],
-//     "herbs":[""],
-//     "quirky":["mushroom","chocolate"]
-//   },
-//   "palate": {
-//     "floral": ["violet","potpourri"],
-//     "redFruit":["red plum"],
-//     "blackFruit":["black plum"],
-//     "herbs":[],
-//     "quirky": ["toffee","mushroom"]
-//     }
-// }

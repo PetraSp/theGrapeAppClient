@@ -25,9 +25,9 @@ export class ApiService {
 
   getWineBySearchQuery(userQuery) {
     this.userQuery = userQuery;
-    return this.http.post(`${this.BASE_URL}/api/wine-search`, this.userQuery).subscribe(
+    return this.http.get(`${this.BASE_URL}/api/wine-search`, this.userQuery).subscribe(
           res => {
-            console.log('Registration successful');
+            console.log('Search has been sent');
           },
           error => {
             console.log(error);
