@@ -19,7 +19,9 @@ export class ScanComponent implements OnInit {
 
   findWine(form) {
     console.log("form", form);
-    const theWine = this.api.getWineBySearchQuery(form.name);
-    console.log(theWine);
+    this.api.getWineBySearchQuery(form.name)
+    .subscribe(res => console.log(res))
+    // .catch(err => console.log(err))
+
   }
 }

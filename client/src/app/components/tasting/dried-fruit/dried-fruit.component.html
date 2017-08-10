@@ -18,6 +18,7 @@
 
 <div class="title driedFruit-container">
    <section class="driedFruitComponentOptions">
+
      <button class="button"
      [ngClass]="{'active': driedFruitResponse.includes('dried figs')}"
      (click)="userInputToggle('dried figs')">
@@ -42,6 +43,7 @@
      [ngClass]="{'active': driedFruitResponse.length < 1}"
      (click)="userInputToggle('none')">
      None</button>
+
   </section>
 </div>
 
