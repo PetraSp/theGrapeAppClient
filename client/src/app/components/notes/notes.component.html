@@ -1,12 +1,12 @@
 <section class="stagsWinery">
   <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/TGA_Images/NapaVineyard.jpg" alt="Stags' Leap Winery" class='bg'>
-  <img src="https://s3.eu-west-2.amazonaws.com/the-grape-app-bucket/icons/stagsLabel.svg" class="stagsLogo" width="300" height="200" alt="Stags' Label">
+  <img src="{{wineName.label}}" class="stagsLogo" width="150" height="200" alt="Stags' Label">
 </section>
 
 <div class="wineName">
-  <p>Stag's Leap</p>
-  <p>Cabernet Sauvignon</p>
-  <p>Napa Valley, 2012</p>
+  <p>{{wineName.name}}</p>
+  <p>{{wineName.vineyard}}</p>
+  <p>{{wineName.vintage}}</p>
 </div>
 
 <hr class="line">
