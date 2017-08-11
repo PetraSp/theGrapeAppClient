@@ -11,20 +11,10 @@
 .wine-info .name {
   color: #593E68;
   font-size: 20px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.wine-info .vineyard {
-  color: #593E68;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.wine-info .vintage {
-  color: #593E68;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
 
 
 .btn-find {
