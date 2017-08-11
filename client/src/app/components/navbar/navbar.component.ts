@@ -18,5 +18,5 @@ export class NavbarComponent implements OnInit {
   }
 
   hello: boolean = false;
-  // hello: boolean = this.location === 'home';
+
 }

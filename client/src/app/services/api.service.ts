@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { environment } from '../../environments/environment';
 
 
 @Injectable()
 export class ApiService {
-
-  BASE_URL: string = 'http://localhost:3000';
+  // CHANGE FOR EVRY INSTANCE OF BASE_URL IN PROJECT
+  BASE_URL: string = environment.API_BASE_URL;
   userQuery = '';
   wineName;
 
