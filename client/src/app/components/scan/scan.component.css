@@ -1,7 +1,7 @@
 .bottle {
   margin: 0 auto;
   display: block;
-  height: 600px;
+  height: 500px;
 }
 
 .wine-info {
@@ -67,4 +67,14 @@ input,
 input::-webkit-input-placeholder {
     font-size: 14px;
     line-height: 2;
+}
+
+.title {
+  padding: 0 4%;
+}
+
+@media (min-width: 768px) {
+  .bottle {
+    height: 700px;
+  }
 }
