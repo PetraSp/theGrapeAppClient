@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private userApi: UserApiService,
-    private session: SessionService,
+    public session: SessionService,
     private router: Router,
   ) { }
 

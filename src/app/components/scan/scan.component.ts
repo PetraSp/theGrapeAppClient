@@ -14,7 +14,7 @@ export class ScanComponent implements OnInit {
   wine = '';
 
   constructor(
-    private session: SessionService,
+    public session: SessionService,
     private api: ApiService,
     private route: Router
   ) {
@@ -24,17 +24,14 @@ export class ScanComponent implements OnInit {
   }
 
   findWine(form) {
-    console.log("form", form);
+    console.log('form', form);
     this.api.getWineBySearchQuery(form.name)
     .subscribe((res) => {
-      console.log("this is our res!!!!", res)
       this.wineObject = res;
       this.wineObject = JSON.parse(this.wineObject._body);
       this.wine = this.wineObject[0];
-      console.log("this.wine", this.wine);
-      
-    })
-    // .catch(err => console.log(err))
+      console.log('this.wine', this.wine);
+    });
   }
 
   goToTastingIntro() {

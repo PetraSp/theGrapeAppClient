@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private tastingProgress: TastingProgressService,
-    private session: SessionService,
+    public session: SessionService,
     private link: LinkService,
     private router: Router) {
       this.location = router.url;
